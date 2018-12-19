@@ -1,0 +1,551 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0391-router-helpers - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="introduction.html">Introduction</a></li><li><a href="0001-transform-attribute-meta-parameter.html"><strong>1.</strong> 0001-transform-attribute-meta-parameter</a></li><li><a href="0003-block-params.html"><strong>2.</strong> 0003-block-params</a></li><li><a href="0010-engines.html"><strong>3.</strong> 0010-engines</a></li><li><a href="0011-improved-cp-syntax.html"><strong>4.</strong> 0011-improved-cp-syntax</a></li><li><a href="0015-the-road-to-ember-2-0.html"><strong>5.</strong> 0015-the-road-to-ember-2-0</a></li><li><a href="0024-bound-attributes.html"><strong>6.</strong> 0024-bound-attributes</a></li><li><a href="0045-internet-explorer.html"><strong>7.</strong> 0045-internet-explorer</a></li><li><a href="0046-registry-reform.html"><strong>8.</strong> 0046-registry-reform</a></li><li><a href="0050-improved-actions.html"><strong>9.</strong> 0050-improved-actions</a></li><li><a href="0053-helpers.html"><strong>10.</strong> 0053-helpers</a></li><li><a href="0056-improved-release-cycle.html"><strong>11.</strong> 0056-improved-release-cycle</a></li><li><a href="0057-ember-data-reference-unification.html"><strong>12.</strong> 0057-ember-data-reference-unification</a></li><li><a href="0058-helper-listing.html"><strong>13.</strong> 0058-helper-listing</a></li><li><a href="0061-ember-data-background-fetch.html"><strong>14.</strong> 0061-ember-data-background-fetch</a></li><li><a href="0064-contextual-component-lookup.html"><strong>15.</strong> 0064-contextual-component-lookup</a></li><li><a href="0065-deprecation-warning-handlers.html"><strong>16.</strong> 0065-deprecation-warning-handlers</a></li><li><a href="0091-weakmap.html"><strong>17.</strong> 0091-weakmap</a></li><li><a href="0095-router-service.html"><strong>18.</strong> 0095-router-service</a></li><li><a href="0101-ember-data-friendly-errors.html"><strong>19.</strong> 0101-ember-data-friendly-errors</a></li><li><a href="0120-route-serializers.html"><strong>20.</strong> 0120-route-serializers</a></li><li><a href="0136-contains-to-includes.html"><strong>21.</strong> 0136-contains-to-includes</a></li><li><a href="0139-isHtmlSafe.html"><strong>22.</strong> 0139-isHtmlSafe</a></li><li><a href="0143-module-unification.html"><strong>23.</strong> 0143-module-unification</a></li><li><a href="0150-factory-for.html"><strong>24.</strong> 0150-factory-for</a></li><li><a href="0176-javascript-module-api.html"><strong>25.</strong> 0176-javascript-module-api</a></li><li><a href="0178-deprecate-ember-k.html"><strong>26.</strong> 0178-deprecate-ember-k</a></li><li><a href="0181-deprecate-ember-data-initializers.html"><strong>27.</strong> 0181-deprecate-ember-data-initializers</a></li><li><a href="0186-track-unique-history-location-state.html"><strong>28.</strong> 0186-track-unique-history-location-state</a></li><li><a href="0191-deprecate-component-lifecycle-hook-args.html"><strong>29.</strong> 0191-deprecate-component-lifecycle-hook-args</a></li><li><a href="0194-deprecate-custom-event-manager.html"><strong>30.</strong> 0194-deprecate-custom-event-manager</a></li><li><a href="0213-custom-components.html"><strong>31.</strong> 0213-custom-components</a></li><li><a href="0225-ember-engines-mount-params.html"><strong>32.</strong> 0225-ember-engines-mount-params</a></li><li><a href="0226-named-blocks.html"><strong>33.</strong> 0226-named-blocks</a></li><li><a href="0229-deprecate-testing-restricted-resolver.html"><strong>34.</strong> 0229-deprecate-testing-restricted-resolver</a></li><li><a href="0232-simplify-qunit-testing-api.html"><strong>35.</strong> 0232-simplify-qunit-testing-api</a></li><li><a href="0236-deprecation-ember-string.html"><strong>36.</strong> 0236-deprecation-ember-string</a></li><li><a href="0237-deprecation-ember-map.html"><strong>37.</strong> 0237-deprecation-ember-map</a></li><li><a href="0240-es-classes.html"><strong>38.</strong> 0240-es-classes</a></li><li><a href="0252-browser-support-changes.html"><strong>39.</strong> 0252-browser-support-changes</a></li><li><a href="0268-acceptance-testing-refactor.html"><strong>40.</strong> 0268-acceptance-testing-refactor</a></li><li><a href="0276-named-args.html"><strong>41.</strong> 0276-named-args</a></li><li><a href="0278-template-only-components.html"><strong>42.</strong> 0278-template-only-components</a></li><li><a href="0280-remove-application-wrapper.html"><strong>43.</strong> 0280-remove-application-wrapper</a></li><li><a href="0281-es5-getters.html"><strong>44.</strong> 0281-es5-getters</a></li><li><a href="0286-block-let-template-helper.html"><strong>45.</strong> 0286-block-let-template-helper</a></li><li><a href="0287-promote-in-element-to-public-api.html"><strong>46.</strong> 0287-promote-in-element-to-public-api</a></li><li><a href="0293-record-data.html"><strong>47.</strong> 0293-record-data</a></li><li><a href="0294-optional-jquery.html"><strong>48.</strong> 0294-optional-jquery</a></li><li><a href="0297-deprecate-ember-logger.html"><strong>49.</strong> 0297-deprecate-ember-logger</a></li><li><a href="0300-rfc-process-update.html"><strong>50.</strong> 0300-rfc-process-update</a></li><li><a href="0308-deprecate-property-lookup-fallback.html"><strong>51.</strong> 0308-deprecate-property-lookup-fallback</a></li><li><a href="0311-angle-bracket-invocation.html"><strong>52.</strong> 0311-angle-bracket-invocation</a></li><li><a href="0318-array-helper.html"><strong>53.</strong> 0318-array-helper</a></li><li><a href="0322-deprecate-copy-copyable.html"><strong>54.</strong> 0322-deprecate-copy-copyable</a></li><li><a href="0324-deprecate-component-isvisible.html"><strong>55.</strong> 0324-deprecate-component-isvisible</a></li><li><a href="0326-ember-data-filter-deprecation.html"><strong>56.</strong> 0326-ember-data-filter-deprecation</a></li><li><a href="0329-deprecated-ember-evented-in-ember-data.html"><strong>57.</strong> 0329-deprecated-ember-evented-in-ember-data</a></li><li><a href="0331-deprecate-globals-resolver.html"><strong>58.</strong> 0331-deprecate-globals-resolver</a></li><li><a href="0332-ember-data-record-links-and-meta.html"><strong>59.</strong> 0332-ember-data-record-links-and-meta</a></li><li><a href="0335-deprecate-send-action.html"><strong>60.</strong> 0335-deprecate-send-action</a></li><li><a href="0337-native-class-constructor-update.html"><strong>61.</strong> 0337-native-class-constructor-update</a></li><li><a href="0340-deprecate-ember-merge.html"><strong>62.</strong> 0340-deprecate-ember-merge</a></li><li><a href="0345-discord.html"><strong>63.</strong> 0345-discord</a></li><li><a href="0364-roadmap-2018.html"><strong>64.</strong> 0364-roadmap-2018</a></li><li><a href="0369-deprecate-computed-clobberability.html"><strong>65.</strong> 0369-deprecate-computed-clobberability</a></li><li><a href="0370-deprecate-computed-volatile.html"><strong>66.</strong> 0370-deprecate-computed-volatile</a></li><li><a href="0372-ember-data-model-factory-for.html"><strong>67.</strong> 0372-ember-data-model-factory-for</a></li><li><a href="0373-Element-Modifier-Managers.html"><strong>68.</strong> 0373-Element-Modifier-Managers</a></li><li><a href="0375-deprecate-computed-property-modifier.html"><strong>69.</strong> 0375-deprecate-computed-property-modifier</a></li><li><a href="0391-router-helpers.html" class="active"><strong>70.</strong> 0391-router-helpers</a></li><li><a href="0392-deprecate-component-manager-string-lookup.html"><strong>71.</strong> 0392-deprecate-component-manager-string-lookup</a></li><li><a href="0398-RouteInfo-Metadata.html"><strong>72.</strong> 0398-RouteInfo-Metadata</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <ul>
+<li>Start Date: 2018-10-22</li>
+<li>RFC PR: https://github.com/emberjs/rfcs/pull/391</li>
+<li>Ember Issue: (leave this empty)</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#router-helpers" id="router-helpers"><h1>Router Helpers</h1></a>
+<a class="header" href="0391-router-helpers.html#summary" id="summary"><h2>Summary</h2></a>
+<p>This RFC introduces new router helpers that represent a decomposition of functionality of what we commonly use <code>{{link-to}}</code> for. Below is a list of the new helpers:</p>
+<pre><code class="language-hbs">{{url-for}}
+{{root-url}}
+{{is-active}}
+{{is-loading}}
+{{is-transitioning-in}}
+{{is-transitioning-out}}
+</code></pre>
+<p>This represents a super set of the functionality provided by <a href="https://github.com/rwjblue/ember-router-helpers/">Ember Router Helpers</a> which has provided this RFC that confidence that a decomposition is possible.</p>
+<p>This RFC does <strong>not</strong> deprecate <code>{{link-to}}</code> or <code>{{query-params}}</code>. These deprecations will come in the form of a deprecation RFC.</p>
+<a class="header" href="0391-router-helpers.html#motivation" id="motivation"><h2>Motivation</h2></a>
+<p><code>{{link-to}}</code> is the primary way for Ember applications to transition from route to route in your application. While this works for a lot of cases there are some use cases that are not well supported or supported at all by the framework. Below is an enumeration of cases that <code>{{link-to}}</code> does not address.</p>
+<a class="header" href="0391-router-helpers.html#anchor-tags" id="anchor-tags"><h3>Anchor Tags</h3></a>
+<p>We currently do not have a good solution for transitioning solely based on HTML anchors defined in the templating layer. For instance let say you are using <a href="https://github.com/ember-intl/ember-intl">Ember Intl</a> to do internationalization for your application. Ember Intl uses the <a href="http://userguide.icu-project.org/formatparse/messages">ICU message format</a> for the actual translation strings and supports having HTML within the string. Now lets say you want to put a link in a translation string and have it work like <code>{{link-to}}</code> works. In that case you either have to roll your own solution or use something like <a href="https://github.com/intercom/ember-href-to">Ember-href-to</a>. Another example where this would be useful is that links within markdown produced by addons like <a href="https://github.com/gcollazo/ember-cli-showdown">Ember-CLI-Showdown</a> would just work. API's like <code>RouterService#transitionTo</code> can transition an application using relative URLs and we have an opportunity to leverage this functionality to support this use case.</p>
+<a class="header" href="0391-router-helpers.html#extensibility-of-link-to" id="extensibility-of-link-to"><h3>Extensibility Of <code>{{link-to}}</code></h3></a>
+<p>In 2.11 we moved <code>LinkComponent</code> from <code>private</code> to <code>public</code> largely because there was no other way to modify the behavior of <code>{{link-to}}</code> and it had effectively become de-facto public API. That being said, it is less than desirable to <code>reopen</code> or <code>extend</code> framework objects to gain access to the functionality to create some application specific primitive. For example <a href="https://github.com/kaliber5/ember-bootstrap/">Ember Bootsrap</a> extends the <a href="https://github.com/kaliber5/ember-bootstrap/blob/master/addon/components/base/bs-dropdown/menu/link-to.js"><code>LinkComponent</code></a> and then layers more functionality on top of it. Addons would be better served if they had access to more primitive functionality.</p>
+<a class="header" href="0391-router-helpers.html#css-class-magic" id="css-class-magic"><h3>CSS Class Magic</h3></a>
+<p><code>{{link-to}}</code> adds some convienent, yet not obvious, classes to the element. These classes are:</p>
+<ul>
+<li><code>active</code>: applied to any <code>{{link-to}}</code> that is on the &quot;active&quot; path</li>
+<li><code>disabled</code>: applied depending on the evaluation of <code>disabled=someBool</code></li>
+<li><code>loading</code>: applied if one or more of the models passed are <code>undefined</code></li>
+<li><code>ember-transitioning-in</code>: applied to links that are about to be <code>active</code></li>
+<li><code>ember-transitioning-out</code>: applied to links that are about to be deactivated</li>
+</ul>
+<p>The issue with these class names is that they are not declared anywhere in your templated and are provided by the <code>LinkComponent</code> as <code>classNameBindings</code>. This effectively creates a set of reserved class names that are highly prone to colissions in your typical application.</p>
+<p>Furthermore, addons like <a href="https://github.com/alexspeller/ember-cli-active-link-wrapper">ember-cli-active-link-wrapper</a> and <a href="https://github.com/zoltan-nz/ember-bootstrap-nav-link">ember-bootstarp-nav-link</a> do a ton of work arounds to get things like the <code>.active</code> class to show up on wrapping elements instead of the element directly. This is a great example that shows we are missing some primitives.</p>
+<a class="header" href="0391-router-helpers.html#default-query-param-serialization" id="default-query-param-serialization"><h3>Default Query Param Serialization</h3></a>
+<p>Lastly, <code>{{link-to}}</code> has very strange behavior when it comes to serializing query params. On a controller you declare the query params for a specific route. These query params can have defaults for them. For example if you have a controller that looks like:</p>
+<pre><code class="language-js">// app/controllers/profile.js
+import Controller from '@ember/controller';
+
+export default Controller.extend({
+  queryParams: ['someBool'],
+  someBool: true,
+})
+</code></pre>
+<p>and you to link to it like this:</p>
+<pre><code class="language-hbs">{{#link-to 'profile'}}Profile{{/link-to}}
+</code></pre>
+<p>In the DOM you will have an <code>href</code> on the anchor that gets serializes as:</p>
+<pre><code class="language-html">&lt;a href=&quot;/profile?someBool=true&quot; class=&quot;active ember-view&quot;&gt;Profile&lt;/a&gt;
+</code></pre>
+<p>Looking at a template you would have no idea that rendering the <code>{{link-to}}</code> would result in the query params being serialized. From an implementation point of view, this is problematic as we are forced to <code>lookup</code> the <code>Route</code> and the associated <code>Controller</code> to grab the query params. This can add a non-trivial amount of overhead during rendering, especially if you have many <code>{{link-to}}</code>s on a route that link many different parts of your application. As a side-note, this is one of the things  that needs to be dealt with if we are ever to kill controllers.</p>
+<a class="header" href="0391-router-helpers.html#does-not-work-with-angle-bracket-invocation" id="does-not-work-with-angle-bracket-invocation"><h3>Does Not Work With Angle Bracket Invocation</h3></a>
+<p>Since angle bracket invocation does not support positional params, <code>{{link-to}}</code> has to adapt it's public API.</p>
+<a class="header" href="0391-router-helpers.html#costly-api" id="costly-api"><h3>Costly API</h3></a>
+<p><code>{{link-to}}</code> has <a href="0391-router-helpers.html#kitchen-sink">a lot of functionality</a>, however this functionality does come at a cost for every instance of <code>{{link-to}}</code>. This is not ideal especially if you're just using <code>{{link-to}}</code> to generate a url that can be transitioned to. By providing fine grain control of the functionality, applications should see a performance boost.</p>
+<a class="header" href="0391-router-helpers.html#detailed-design" id="detailed-design"><h2>Detailed design</h2></a>
+<p>Below is a detailed design of all of the template helpers.</p>
+<a class="header" href="0391-router-helpers.html#url-generation-helpers" id="url-generation-helpers"><h3>URL Generation Helpers</h3></a>
+<p>The following helpers are to be used to construct a valid root-relative URL that will be used by the event dispatcher to perform a transition. These helpers <strong>do not</strong> pass the in memory model, meaning the model hook will always run for the route you are transitioning to.</p>
+<a class="header" href="0391-router-helpers.html#url-for-helper" id="url-for-helper"><h3><code>{{url-for}}</code> Helper</h3></a>
+<pre><code class="language-hbs">{{url-for routeName model queryParams=(hash a=a)}}
+</code></pre>
+<p>Or</p>
+<pre><code class="language-hbs">{{url-for routeName models=model queryParams=(hash a=a)}}
+</code></pre>
+<p><code>{{url-for}}</code> generates a root-relative URL as a string (which will include the application's rootUrl). When the link is clicked it will cause a transition to occur. See the <a href="0391-router-helpers.html#event-dispatcher-changes">Event Dispatcher Changes</a>. It will not serialize the default query params on the controller.</p>
+<a class="header" href="0391-router-helpers.html#signature-explainer" id="signature-explainer"><h4>Signature Explainer</h4></a>
+<p>Using the example above:</p>
+<p><em>Positional Params</em></p>
+<ul>
+<li><strong><code>routeName</code></strong> <em>String</em>: A fully-qualified name of this route, like <code>&quot;people.index&quot;</code></li>
+<li><strong><code>model</code></strong> <em>...Object|Array|Number|String</em>: Optionally pass an arbitrary amount of models or identifiers for each dynamic segment to be use for generation.</li>
+</ul>
+<p><em>Named Params</em></p>
+<ul>
+<li><strong><code>models</code></strong> <em>Object|Array|Number|String</em>: Same as the positional parameter. It is a compiler error if the positional params and the named param is used.</li>
+<li><strong><code>queryParms</code></strong> <em>Object</em>: Optionally pass key value pairs that will be serialized</li>
+</ul>
+<p><em>Returns</em></p>
+<ul>
+<li><em>String</em>: a root-relative URL as a string (which will include the application's <code>rootUrl</code>)</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#root-url-helper" id="root-url-helper"><h3><code>{{root-url}}</code> Helper</h3></a>
+<p><code>{{root-url}}</code> simply returns the value from <code>Application.rootURL</code>. It can be used to prefix any <code>href</code> values you wish to hard code.</p>
+<pre><code class="language-hbs">&lt;a href=&quot;{{root-url}}profile&quot;&gt;Profile&lt;/a&gt;
+</code></pre>
+<p>Will result in the following for the default configuration:</p>
+<pre><code class="language-html">&lt;a href=&quot;/profile&quot;&gt;Profile&lt;/a&gt;
+</code></pre>
+<a class="header" href="0391-router-helpers.html#signature-explainer-1" id="signature-explainer-1"><h4>Signature Explainer</h4></a>
+<p><code>{{root-url}}</code> does not take any parameters.</p>
+<a class="header" href="0391-router-helpers.html#route-state-helpers" id="route-state-helpers"><h3>Route State Helpers</h3></a>
+<p>The following helpers are all <em>context dependent</em>, not global. For instance you might have two copies of <code>(is-active &quot;posts&quot;)</code> in your app simultaneously where one is <code>true</code> and one is <code>false</code>, because you're in the middle of an animated transition, or because you're pre-rendering a route that hasn't been entered yet.</p>
+<a class="header" href="0391-router-helpers.html#is-active-helper" id="is-active-helper"><h3><code>{{is-active}}</code> Helper</h3></a>
+<pre><code class="language-hbs">{{is-active 'people.index' model queryParams=(hash a=a)}}
+</code></pre>
+<p>or</p>
+<pre><code class="language-hbs">{{is-active 'people.index' models=model queryParams=(hash a=a)}}
+</code></pre>
+<p>The arguments to <code>{{is-active}}</code> have the same semantics as <code>{{url-for}}</code>, however the return value is a boolean. This should provide the same logic that determines whether to put an <code>active</code> class on a <code>{{link-to}}</code>.</p>
+<a class="header" href="0391-router-helpers.html#signature-explainer-2" id="signature-explainer-2"><h4>Signature Explainer</h4></a>
+<p>Using the example above:</p>
+<p><em>Positional Params</em></p>
+<ul>
+<li><strong><code>routeName</code></strong> <em>String</em>: A fully-qualified name of this route, like <code>&quot;people.index&quot;</code></li>
+<li><strong><code>model</code></strong> <em>...Object|Array|Number|String</em>: Optionally pass an arbitrary amount of models to use for generation</li>
+</ul>
+<p><em>Named Params</em></p>
+<ul>
+<li><strong><code>models</code></strong> <em>Object|Array|Number|String</em>: Same as the positional parameter. It is a compiler error if the positional params and the named param is used.</li>
+<li><strong><code>queryParms</code></strong> <em>Object</em>: Optionally pass key value pairs that will be used to determine if the route is active.</li>
+</ul>
+<p><em>Returns</em></p>
+<ul>
+<li><em>Boolean</em>: Determines if the route is active or not.</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#is-loading-helper" id="is-loading-helper"><h3><code>{{is-loading}}</code> Helper</h3></a>
+<pre><code class="language-hbs">{{is-loading 'people.index' model queryParams=(hash a=a)}}
+</code></pre>
+<p>Or</p>
+<pre><code class="language-hbs">{{is-loading 'people.index' models=model queryParams=(hash a=a)}}
+</code></pre>
+<p>The arguments to <code>{{is-loading}}</code> have the same semantics as <code>{{url-for}}</code> and <code>{{is-active}}</code>, however if any of the model(s) passed to it are unresolved e.g. evaluate to <code>undefined</code> the helper will return <code>true</code>, otherwise the helper will return <code>false</code>. This should provide the same logic that determines whether to put an <code>loading</code> class on a <code>{{link-to}}</code>.</p>
+<a class="header" href="0391-router-helpers.html#signature-explainer-3" id="signature-explainer-3"><h4>Signature Explainer</h4></a>
+<p>Using the example above:</p>
+<p><em>Positional Params</em></p>
+<ul>
+<li><strong><code>routeName</code></strong> <em>String</em>: A fully-qualified name of this route, like <code>&quot;people.index&quot;</code></li>
+<li><strong><code>model</code></strong> <em>...Object|Array|Number|String</em>: Optionally pass an arbitrary amount of models to use for generation</li>
+</ul>
+<p><em>Named Params</em></p>
+<ul>
+<li><strong><code>models</code></strong> <em>Object|Array|Number|String</em>: Same as the positional parameter. It is a compiler error if the positional params and the named param is used.</li>
+<li><strong><code>queryParms</code></strong> <em>Object</em>: Optionally pass key value pairs that will be used to determine if the route is loading.</li>
+</ul>
+<p><em>Returns</em></p>
+<ul>
+<li><em>Boolean</em>: Determines if the route is loading or not.</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#is-transitioning-in-helper" id="is-transitioning-in-helper"><h3><code>{{is-transitioning-in}}</code> Helper</h3></a>
+<pre><code class="language-hbs">{{is-transitioning-in 'people.index' model queryParams=(hash a=a)}}
+</code></pre>
+<p>Or</p>
+<pre><code class="language-hbs">{{is-transitioning-in 'people.index' models=model queryParams=(hash a=a)}}
+</code></pre>
+<p>The arguments to <code>{{is-transitioning-in}}</code> have the same semantics as all the other route state helpers, however <code>{{is-transitioning-in}}</code> only returns <code>true</code> when the route is going from an non-active to an active state. This should provide the same logic that determines whether to put an <code>ember-transition-in</code> class on a <code>{{link-to}}</code>.</p>
+<a class="header" href="0391-router-helpers.html#signature-explainer-4" id="signature-explainer-4"><h4>Signature Explainer</h4></a>
+<p>Using the example above:</p>
+<p><em>Positional Params</em></p>
+<ul>
+<li><strong><code>routeName</code></strong> <em>String</em>: A fully-qualified name of this route, like <code>&quot;people.index&quot;</code></li>
+<li><strong><code>model</code></strong> <em>...Object|Array|Number|String</em>: Optionally pass an arbitrary amount of models to use for generation</li>
+</ul>
+<p><em>Named Params</em></p>
+<ul>
+<li><strong><code>models</code></strong> <em>Object|Array|Number|String</em>: Same as the positional parameter. It is a compiler error if the positional params and the named param is used.</li>
+<li><strong><code>queryParms</code></strong> <em>Object</em>:  Optionally pass key value pairs that will be used to determine if the route is transitioning in.</li>
+</ul>
+<p><em>Returns</em></p>
+<ul>
+<li><em>Boolean</em>: Determines if the route is transitioning in.</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#is-transitioning-out-helper" id="is-transitioning-out-helper"><h3><code>{{is-transitioning-out}}</code> Helper</h3></a>
+<pre><code class="language-hbs">{{is-transitioning-out 'people.index' model queryParams=(hash a=a)}}
+</code></pre>
+<p>Or</p>
+<pre><code class="language-hbs">{{is-transitioning-out 'people.index' models=model queryParams=(hash a=a)}}
+</code></pre>
+<p><code>{{is-transitioning-out}}</code> is just the inverse of <code>{{is-transitioning-in}}</code>.</p>
+<a class="header" href="0391-router-helpers.html#signature-explainer-5" id="signature-explainer-5"><h4>Signature Explainer</h4></a>
+<p>Using the example above:</p>
+<p><em>Positional Params</em></p>
+<ul>
+<li><strong><code>routeName</code></strong> <em>String</em>: A fully-qualified name of this route, like <code>&quot;people.index&quot;</code></li>
+<li><strong><code>model</code></strong> <em>...Object|Array|Number|String</em>: Optionally pass an arbitrary amount of models to use for generation</li>
+</ul>
+<p><em>Named Params</em></p>
+<ul>
+<li><strong><code>models</code></strong> <em>Object|Array|Number|String</em>: Same as the positional parameter. It is a compiler error if the positional params and the named param is used.</li>
+<li><strong><code>queryParms</code></strong> <em>Object</em>:  Optionally pass key value pairs that will be used to determine if the route is transitioning out.</li>
+</ul>
+<p><em>Returns</em></p>
+<ul>
+<li><em>Boolean</em>: Determines if the route is transitioning out.</li>
+</ul>
+<a class="header" href="0391-router-helpers.html#event-dispatcher" id="event-dispatcher"><h3>Event Dispatcher</h3></a>
+<p>In the past, only <code>HTMLAnchorElement</code>s that were produced by <code>{{link-to}}</code>s would produce a transition when a user clicked on them. This RFC changes to the global <code>EventDispatcher</code> to allow for any <code>HTMLAnchorElement</code> with a valid root relative <code>href</code> to cause a transition. This will allow for us to not only allows us to support use cases like the ones described in the <a href="0391-router-helpers.html#anchor-tags">motivation</a>, it makes teaching easier since people who know HTML don't need know an Ember specific API to participate in routing transitions.</p>
+<a class="header" href="0391-router-helpers.html#route-globs-and-route-blacklisting" id="route-globs-and-route-blacklisting"><h4>Route Globs And Route Blacklisting</h4></a>
+<p>While the vast majority of the time developers want root relative URLs to cause a transition there are cases where you want root relative urls to cause a normal HTTP navigation. In the router map you can define <a href="https://guides.emberjs.com/release/routing/defining-your-routes/#toc_wildcard--globbing-routes">wildcard / globbing</a> that makes this problematic as any root relative url can be catched by a wildcard route. To solve this issue this RFC proposes expanding the route options to allow for a black list of urls that are allowed to cause a normal HTTP navigation.</p>
+<pre><code class="language-js">Router.map(function() {
+  this.route('not-found', { path: '/*path', blacklist: ['/contact-us', '/order/:order_id'] });
+});
+</code></pre>
+<p>When an event comes into the <code>EventDispatcher</code> we will cross check the blacklist to see if the event should be let through to the browser or if it should be handled internally.</p>
+<a class="header" href="0391-router-helpers.html#transition-attribution" id="transition-attribution"><h3>Transition Attribution</h3></a>
+<p>This RFC introduces the notion of an <code>attribution</code> to the <code>Transition</code>. The <code>TransitionAttribution</code> is a read-only object that has 2 fields <code>event</code> and <code>source</code>.</p>
+<pre><code class="language-ts">interface TransitionAttribution {
+  readonly event: Maybe&lt;Event&gt;;
+  readonly source: unknown
+}
+
+interface Transition {
+  readonly attribution: TransitionAttribution;
+}
+</code></pre>
+<p>On initial render <code>event</code> and <code>source</code> will be <code>null</code>. On subsequent transitions, the <code>event</code> will be the DOM event that caused the transition and <code>element</code> will be populated with <code>HTMLElement</code> that the user interacted with to cause the transition. See <a href="0391-router-helpers.html#appendix-a">Appendix A</a> for example usage. In the event that the transition occurs programmatically through an API like <code>replaceWith</code> or <code>transitionTo</code> the <code>event</code> will be <code>null</code> but can be <a href="0391-router-helpers.html#programatic-attribution">populated by the caller</a>.</p>
+<a class="header" href="0391-router-helpers.html#programatic-attribution" id="programatic-attribution"><h4>Programatic Attribution</h4></a>
+<p>In cases where you need to programatically transition with <code>transitionTo</code> or <code>replaceWith</code> we will allow for you to pass your own <code>TransitionAttribution</code>. See Appendix B for an example.</p>
+<pre><code class="language-ts">interface Options {
+  queryParams?: Dict&lt;string|number&gt;,
+  attribution?: TransitionAttribution;
+}
+
+interface Router /* Route, RouterService */ {
+  //...
+  transitionTo(routeName: string, models?: string|number|object, options?: Options): Transition;
+  replaceWith(routeName: string, models?: string|number|object, options?: Options): Transition;
+}
+</code></pre>
+<a class="header" href="0391-router-helpers.html#transitionattribution-integrity" id="transitionattribution-integrity"><h4><code>Transition.attribution</code> Integrity</h4></a>
+<p>The <code>attribution</code> in a <code>Transition</code> is guaranteed to be carried through the completion of the route transition. This includes <code>abort</code>s, <code>redirect</code>s and <code>retry</code>s of the transition. The <code>attribution</code> field is readonlu and the <code>TransitionAttribution</code> is readonly and frozen.</p>
+<a class="header" href="0391-router-helpers.html#migration-path" id="migration-path"><h2>Migration Path</h2></a>
+<p>Since this RFC does not deprecate <code>{{link-to}}</code> you can continue to use it. That being said <code>{{link-to}}</code> has static semantics therefore we can write a codemod using <a href="https://github.com/ember-template-lint/ember-template-recast">Ember Template Recast</a> to migrate the code. Below are numerous before and after examples of how the codemod would migrate. It's important to note that the behavior of the application <a href="0391-router-helpers.html#url-generation-helpers">will change</a> if you are relying on the passing of the in-memory model. Because of this the codemod would need different levels of converstion.</p>
+<a class="header" href="0391-router-helpers.html#basic-link-to" id="basic-link-to"><h3>Basic <code>{{link-to}}</code></h3></a>
+<p><strong>Before:</strong></p>
+<pre><code class="language-hbs">{{#link-to 'profile' class=&quot;profile&quot;}}Profile{{/link-to}}
+{{link-to 'About' 'about'}}
+</code></pre>
+<p><strong>After:</strong></p>
+<pre><code class="language-hbs">&lt;a href={{url-for 'profile'}} class=&quot;profile&quot;&gt;Profile&lt;/a&gt;
+&lt;a href={{url-for 'about'}}&gt;About&lt;/a&gt;
+</code></pre>
+<a class="header" href="0391-router-helpers.html#with-model-link-to" id="with-model-link-to"><h3>With Model <code>{{link-to}}</code></h3></a>
+<p><strong>Before:</strong></p>
+<pre><code class="language-hbs">{{#link-to 'profile' this.profile class=&quot;profile&quot;}}Profile{{/link-to}}
+{{link-to 'About' 'about' this.contact}}
+</code></pre>
+<p><strong>After:</strong></p>
+<pre><code class="language-hbs">&lt;a class=&quot;profile&quot; href={{url-for 'profile' this.profile}}&gt;Profile&lt;/a&gt;
+&lt;a href={{url-for 'about' this.contact}}&gt;About&lt;/a&gt;
+</code></pre>
+<a class="header" href="0391-router-helpers.html#with-query-params-link-to" id="with-query-params-link-to"><h3>With Query Params <code>{{link-to}}</code></h3></a>
+<p><strong>Before:</strong></p>
+<pre><code class="language-hbs">{{#link-to 'post' this.post (query-params order=&quot;CHRON&quot;)}}{{this.post.name}}{{/link-to}}
+</code></pre>
+<p><strong>After:</strong></p>
+<pre><code class="language-hbs">&lt;a href={{url-for 'post' this.post queryParms=(hash order=&quot;CHRON&quot;)}}&gt;{{this.post.name}}&lt;/a&gt;
+</code></pre>
+<p>One of the trickier parts about this migration is knowing how the autogenerated CSS classes are being used. Because of this, adding the route state helpers must explicitly be turned on in the codemod. For instance if you are making heavy use of the <code>.active</code> class, you will be suited best by turning pass the codemod the correct configuration to do a transform like the following:</p>
+<p><strong>Before</strong></p>
+<pre><code class="language-hbs">{{#link-to 'profile'}}Profile{{/link-to}}
+</code></pre>
+<p><strong>After</strong></p>
+<pre><code class="language-hbs">&lt;a href={{url-for 'profile'}} class={{if (is-active 'profile') 'active'}}&gt;Profile&lt;/a&gt;
+</code></pre>
+<a class="header" href="0391-router-helpers.html#kitchen-sink" id="kitchen-sink"><h4>Kitchen Sink</h4></a>
+<p>If you were to transform all <code>{{link-to}}</code>s verbatim in terms of functionality this would be the result.</p>
+<p><strong>Before</strong></p>
+<pre><code class="language-hbs">{{#link-to 'profile' model (query-parmas foo=bar) replace=true}}Profile{{/link-to}}
+</code></pre>
+<p><strong>After</strong></p>
+<pre><code class="language-hbs">&lt;a
+  href={{url-for 'profile'
+    model
+    queryParams=(hash foo=bar)}}
+  class=&quot;{{if (is-active 'profile' model queryParams=(hash foo=bar)) 'active'}} {{if (is-loading 'profile' model queryParams=(hash foo=bar)) 'loading'}} {{if (is-transitioning-in 'profile' model queryParams=(hash foo=bar)) 'ember-transitioning-in'}} {{if (is-transitioning-out 'profile' model queryParams=(hash foo=bar)) 'ember-transitioning-out'}}&quot;&gt;Profile&lt;/a&gt;
+</code></pre>
+<p>As the kitchen sink example shows, <code>{{link-to}}</code> is packed with functionality. While this convienent, it comes with a cost per <code>{{link-to}}</code> and is the reason why addons like <a href="https://github.com/intercom/ember-href-to">Ember-href-to</a> were created. In reality the vast majority of applications only need a subset of this functionality and in only rare cases need things like the transition and loading states.</p>
+<a class="header" href="0391-router-helpers.html#how-we-teach-this" id="how-we-teach-this"><h2>How we teach this</h2></a>
+<p>In many ways this vastly simplifies the Ember's approach to linking within the app. It removes the requirement for a proprietary API and instead embraces the power of URLs.</p>
+<p>In the cases where you do need to do more complicated things like pass in memory models to a route, things should feel very similar to <code>{{link-to}}</code> as they have the exact same signature. In the case of query param serialization, I believe we are actually aligning a mental model as to how URL generation should work.</p>
+<a class="header" href="0391-router-helpers.html#drawbacks" id="drawbacks"><h2>Drawbacks</h2></a>
+<p>This RFC expands the surface area of the templating layer by exposing the primitives that make up <code>{{link-to}}</code>. This may cause confusion of choosing between using simple basic anchor tags, <code>{{url-for}}</code> and <code>{{link-to}}</code>, however I believe that each one of the these APIs are solving a real problem that we have in Ember today.</p>
+<p>By proxy this may cause people to encapsulate all of these primitives into a single component and thus creating a user-land version of <code>{{link-to}}</code>. This could be seen as a framework misstep if the majority of applications end up depending on the addon.</p>
+<a class="header" href="0391-router-helpers.html#alternatives" id="alternatives"><h2>Alternatives</h2></a>
+<p>We could just start deprecating and removing functionality from <code>{{link-to}}</code> it self. That being said, it is hard to understand how much of the community is reliant on certain feature of <code>{{link-to}}</code>. This also doesn't help with usecases like the i18n and markdown use cases.</p>
+<a class="header" href="0391-router-helpers.html#unresolved-questions" id="unresolved-questions"><h2>Unresolved questions</h2></a>
+<p>TBD?</p>
+<a class="header" href="0391-router-helpers.html#appendix-a" id="appendix-a"><h2>Appendix A</h2></a>
+<pre><code class="language-js">// app/utils/tracking.js
+const TRACKING_DATA = new WeakMap();
+export default TRACKING_DATA;
+</code></pre>
+<pre><code class="language-js">// app/components/track-link.js
+import Component from '@ember/component';
+import TRACKING_DATA from '../utils/tracking';
+
+export default Component.extend({
+  tagName: 'a',
+  attributeBindings: ['href'],
+  didInsertElement() {
+    TRACKING_DATA.set(this.element, this.contextName);
+  }
+})
+</code></pre>
+<pre><code class="language-js">// app/routes/application.js
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import TRACKING_DATA from '../utils/tracking';
+
+export default Route.extend({
+  router: service('router'),
+  init() {
+    this._super(...arguments);
+
+    this.router.on('routeDidChange', transition =&gt; {
+      let { source, event } = trasition.attribution;
+
+      let trackingInfo = {
+        cause: event.type,
+        contextName: null
+      };
+
+      if (TRACKING_DATA.has(trasition.source)) {
+        trackingInfo.contextName = TRACKING_DATA.get(source);
+      }
+
+      ga.send('pageView', {
+        from: transition.from ? transition.from.name : 'initial',
+        to: transition.to.name,
+        attribution: trackingInfo
+      });
+    });
+  }
+})
+</code></pre>
+<pre><code class="language-hbs">&lt;h1&gt;Hello {{@name}}!&lt;/h1&gt;
+&lt;TrackLink href=&quot;/profile&quot; @contextName=&quot;profile.link&quot;&gt;Profile&lt;/TrackLink&gt;
+&lt;TrackLink href=&quot;/about&quot; @contextName=&quot;about.link&quot;&gt;About&lt;/TrackLink&gt;
+&lt;TrackLink href=&quot;/contact&quot; @contextName=&quot;contact.link&quot;&gt;Contact&lt;/TrackLink&gt;
+</code></pre>
+<a class="header" href="0391-router-helpers.html#appendix-b" id="appendix-b"><h2>Appendix B</h2></a>
+<pre><code class="language-js">// app/utils/tracking.js
+const TRACKING_DATA = new WeakMap();
+export default TRACKING_DATA;
+</code></pre>
+<pre><code class="language-js">// app/routes/profile.js
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import TRACKING_DATA from '../utils/tracking';
+
+export default Route.extend({
+  store: service('store'),
+  actions: {
+    changeName(name) {
+      this.model.set('name', name);
+    },
+
+    changeAge(age) {
+      this.model.set('age', age);
+    },
+
+    submit(e) {
+      if (isValid(this.model)) {
+        let attribution = {
+          event: e,
+          source: e.target,
+        };
+
+        TRACKING_DATA.set(e.target, 'profile.submit');
+
+        this.model.save().then(() =&gt; {
+          this.transitionTo('profile.success', { attribution });
+        }, () =&gt; {
+          alert('Issue saving... please try again.');
+        });
+      } else {
+        alert('Data is not valid!');
+      }
+    }
+  }
+})
+</code></pre>
+<pre><code class="language-hbs">&lt;input onchange={{action 'changeName' value=&quot;target.value&quot;}} /&gt;
+&lt;input onchange={{action 'changeAge' value=&quot;target.value&quot;}} /&gt;
+&lt;button onclick={{action 'submit' this.model}}&gt;Submit&lt;/button&gt;
+</code></pre>
+<pre><code class="language-js">// app/routes/application.js
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+import TRACKING_DATA from '../utils/tracking';
+
+export default Route.extend({
+  router: service('router'),
+  init() {
+    this._super(...arguments);
+
+    this.router.on('routeDidChange', transition =&gt; {
+      let { source, event } = trasition.attribution;
+
+      let trackingInfo = {
+        cause: event.type,
+        contextName: null
+      };
+
+      if (TRACKING_DATA.has(trasition.source)) {
+        trackingInfo.contextName = TRACKING_DATA.get(source);
+      }
+
+      ga.send('pageView', {
+        from: transition.from ? transition.from.name : 'initial',
+        to: transition.to.name,
+        attribution: trackingInfo
+      });
+    });
+  }
+})
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="0375-deprecate-computed-property-modifier.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="0392-deprecate-component-manager-string-lookup.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="0375-deprecate-computed-property-modifier.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="0392-deprecate-component-manager-string-lookup.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

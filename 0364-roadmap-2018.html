@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0364-roadmap-2018 - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="introduction.html">Introduction</a></li><li><a href="0001-transform-attribute-meta-parameter.html"><strong>1.</strong> 0001-transform-attribute-meta-parameter</a></li><li><a href="0003-block-params.html"><strong>2.</strong> 0003-block-params</a></li><li><a href="0010-engines.html"><strong>3.</strong> 0010-engines</a></li><li><a href="0011-improved-cp-syntax.html"><strong>4.</strong> 0011-improved-cp-syntax</a></li><li><a href="0015-the-road-to-ember-2-0.html"><strong>5.</strong> 0015-the-road-to-ember-2-0</a></li><li><a href="0024-bound-attributes.html"><strong>6.</strong> 0024-bound-attributes</a></li><li><a href="0045-internet-explorer.html"><strong>7.</strong> 0045-internet-explorer</a></li><li><a href="0046-registry-reform.html"><strong>8.</strong> 0046-registry-reform</a></li><li><a href="0050-improved-actions.html"><strong>9.</strong> 0050-improved-actions</a></li><li><a href="0053-helpers.html"><strong>10.</strong> 0053-helpers</a></li><li><a href="0056-improved-release-cycle.html"><strong>11.</strong> 0056-improved-release-cycle</a></li><li><a href="0057-ember-data-reference-unification.html"><strong>12.</strong> 0057-ember-data-reference-unification</a></li><li><a href="0058-helper-listing.html"><strong>13.</strong> 0058-helper-listing</a></li><li><a href="0061-ember-data-background-fetch.html"><strong>14.</strong> 0061-ember-data-background-fetch</a></li><li><a href="0064-contextual-component-lookup.html"><strong>15.</strong> 0064-contextual-component-lookup</a></li><li><a href="0065-deprecation-warning-handlers.html"><strong>16.</strong> 0065-deprecation-warning-handlers</a></li><li><a href="0091-weakmap.html"><strong>17.</strong> 0091-weakmap</a></li><li><a href="0095-router-service.html"><strong>18.</strong> 0095-router-service</a></li><li><a href="0101-ember-data-friendly-errors.html"><strong>19.</strong> 0101-ember-data-friendly-errors</a></li><li><a href="0120-route-serializers.html"><strong>20.</strong> 0120-route-serializers</a></li><li><a href="0136-contains-to-includes.html"><strong>21.</strong> 0136-contains-to-includes</a></li><li><a href="0139-isHtmlSafe.html"><strong>22.</strong> 0139-isHtmlSafe</a></li><li><a href="0143-module-unification.html"><strong>23.</strong> 0143-module-unification</a></li><li><a href="0150-factory-for.html"><strong>24.</strong> 0150-factory-for</a></li><li><a href="0176-javascript-module-api.html"><strong>25.</strong> 0176-javascript-module-api</a></li><li><a href="0178-deprecate-ember-k.html"><strong>26.</strong> 0178-deprecate-ember-k</a></li><li><a href="0181-deprecate-ember-data-initializers.html"><strong>27.</strong> 0181-deprecate-ember-data-initializers</a></li><li><a href="0186-track-unique-history-location-state.html"><strong>28.</strong> 0186-track-unique-history-location-state</a></li><li><a href="0191-deprecate-component-lifecycle-hook-args.html"><strong>29.</strong> 0191-deprecate-component-lifecycle-hook-args</a></li><li><a href="0194-deprecate-custom-event-manager.html"><strong>30.</strong> 0194-deprecate-custom-event-manager</a></li><li><a href="0213-custom-components.html"><strong>31.</strong> 0213-custom-components</a></li><li><a href="0225-ember-engines-mount-params.html"><strong>32.</strong> 0225-ember-engines-mount-params</a></li><li><a href="0226-named-blocks.html"><strong>33.</strong> 0226-named-blocks</a></li><li><a href="0229-deprecate-testing-restricted-resolver.html"><strong>34.</strong> 0229-deprecate-testing-restricted-resolver</a></li><li><a href="0232-simplify-qunit-testing-api.html"><strong>35.</strong> 0232-simplify-qunit-testing-api</a></li><li><a href="0236-deprecation-ember-string.html"><strong>36.</strong> 0236-deprecation-ember-string</a></li><li><a href="0237-deprecation-ember-map.html"><strong>37.</strong> 0237-deprecation-ember-map</a></li><li><a href="0240-es-classes.html"><strong>38.</strong> 0240-es-classes</a></li><li><a href="0252-browser-support-changes.html"><strong>39.</strong> 0252-browser-support-changes</a></li><li><a href="0268-acceptance-testing-refactor.html"><strong>40.</strong> 0268-acceptance-testing-refactor</a></li><li><a href="0276-named-args.html"><strong>41.</strong> 0276-named-args</a></li><li><a href="0278-template-only-components.html"><strong>42.</strong> 0278-template-only-components</a></li><li><a href="0280-remove-application-wrapper.html"><strong>43.</strong> 0280-remove-application-wrapper</a></li><li><a href="0281-es5-getters.html"><strong>44.</strong> 0281-es5-getters</a></li><li><a href="0286-block-let-template-helper.html"><strong>45.</strong> 0286-block-let-template-helper</a></li><li><a href="0287-promote-in-element-to-public-api.html"><strong>46.</strong> 0287-promote-in-element-to-public-api</a></li><li><a href="0293-record-data.html"><strong>47.</strong> 0293-record-data</a></li><li><a href="0294-optional-jquery.html"><strong>48.</strong> 0294-optional-jquery</a></li><li><a href="0297-deprecate-ember-logger.html"><strong>49.</strong> 0297-deprecate-ember-logger</a></li><li><a href="0300-rfc-process-update.html"><strong>50.</strong> 0300-rfc-process-update</a></li><li><a href="0308-deprecate-property-lookup-fallback.html"><strong>51.</strong> 0308-deprecate-property-lookup-fallback</a></li><li><a href="0311-angle-bracket-invocation.html"><strong>52.</strong> 0311-angle-bracket-invocation</a></li><li><a href="0318-array-helper.html"><strong>53.</strong> 0318-array-helper</a></li><li><a href="0322-deprecate-copy-copyable.html"><strong>54.</strong> 0322-deprecate-copy-copyable</a></li><li><a href="0324-deprecate-component-isvisible.html"><strong>55.</strong> 0324-deprecate-component-isvisible</a></li><li><a href="0326-ember-data-filter-deprecation.html"><strong>56.</strong> 0326-ember-data-filter-deprecation</a></li><li><a href="0329-deprecated-ember-evented-in-ember-data.html"><strong>57.</strong> 0329-deprecated-ember-evented-in-ember-data</a></li><li><a href="0331-deprecate-globals-resolver.html"><strong>58.</strong> 0331-deprecate-globals-resolver</a></li><li><a href="0332-ember-data-record-links-and-meta.html"><strong>59.</strong> 0332-ember-data-record-links-and-meta</a></li><li><a href="0335-deprecate-send-action.html"><strong>60.</strong> 0335-deprecate-send-action</a></li><li><a href="0337-native-class-constructor-update.html"><strong>61.</strong> 0337-native-class-constructor-update</a></li><li><a href="0340-deprecate-ember-merge.html"><strong>62.</strong> 0340-deprecate-ember-merge</a></li><li><a href="0345-discord.html"><strong>63.</strong> 0345-discord</a></li><li><a href="0364-roadmap-2018.html" class="active"><strong>64.</strong> 0364-roadmap-2018</a></li><li><a href="0369-deprecate-computed-clobberability.html"><strong>65.</strong> 0369-deprecate-computed-clobberability</a></li><li><a href="0370-deprecate-computed-volatile.html"><strong>66.</strong> 0370-deprecate-computed-volatile</a></li><li><a href="0372-ember-data-model-factory-for.html"><strong>67.</strong> 0372-ember-data-model-factory-for</a></li><li><a href="0373-Element-Modifier-Managers.html"><strong>68.</strong> 0373-Element-Modifier-Managers</a></li><li><a href="0375-deprecate-computed-property-modifier.html"><strong>69.</strong> 0375-deprecate-computed-property-modifier</a></li><li><a href="0391-router-helpers.html"><strong>70.</strong> 0391-router-helpers</a></li><li><a href="0392-deprecate-component-manager-string-lookup.html"><strong>71.</strong> 0392-deprecate-component-manager-string-lookup</a></li><li><a href="0398-RouteInfo-Metadata.html"><strong>72.</strong> 0398-RouteInfo-Metadata</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="0364-roadmap-2018.html#ember-2018-roadmap-rfc" id="ember-2018-roadmap-rfc"><h1>Ember 2018 Roadmap RFC</h1></a>
+<a class="header" href="0364-roadmap-2018.html#summary" id="summary"><h1>Summary</h1></a>
+<p>This RFC sets the Ember 2018 Roadmap. This year’s goals are to:</p>
+<ul>
+<li>Improve communication and streamline decision-making, and empower new leaders.</li>
+<li>Finish the major initiatives that we’ve already started.</li>
+<li>Ship a new <em>edition</em>, Ember Octane, focused on performance and productivity.</li>
+</ul>
+<a class="header" href="0364-roadmap-2018.html#motivation" id="motivation"><h1>Motivation</h1></a>
+<p>This document is a distillation of multiple sources:</p>
+<ol>
+<li>The 2018 Community Survey.</li>
+<li>Community #EmberJS2018 blog posts, authored in response to our call for posts.</li>
+<li>Discussion on https://discuss.emberjs.com</li>
+<li>Deliberations among the Ember core teams.</li>
+</ol>
+<p>The goal of the RFC is to align the Ember community around a set of shared, achievable goals that balance the needs of existing users with the need to grow and support new use cases.</p>
+<a class="header" href="0364-roadmap-2018.html#detailed-design" id="detailed-design"><h1>Detailed design</h1></a>
+<p>This year is primarily about finishing initiatives that we’ve already started, fine-tuning our communication channels, and getting the world excited about Ember.</p>
+<ul>
+<li><strong>Improve communication and streamline decision-making</strong>. We will expand and refine the core team structure, to ensure decisions are made quickly, communication is clear, and users feel empowered to become contributors. We will invest in mentoring new leaders, and cross-pollinating knowledge between teams. As a community, we will share our excitement about Ember with the wider web development world.</li>
+<li><strong>Finish what we started.</strong> We need to focus on stabilizing and polishing the work that we’ve already started in 2018. We will add extension points to allow popular new tools to be quickly adopted in Ember apps. We will standardize around ES modules and npm packages, better enabling the sharing of Ember tools with the wider JavaScript community.</li>
+<li><strong>Ship Ember Octane</strong>. We will ship a new <em>edition</em> of Ember, emphasizing its <em>modern productivity and performance</em>. We will polish our compatibility with new JavaScript language features like native classes, decorators, and async functions. We will continue efforts like optional jQuery and treeshaking that reduce file size. We will overhaul the Ember homepage to align with Octane and tell the story of modern Ember.</li>
+</ul>
+<p>To help us deliver a polished, cohesive experience, we will focus on two end-to-end, real world use cases. Having concrete use cases in mind helps us improve our marketing as well as prioritize feature development. In 2018, our two use cases are:</p>
+<ul>
+<li><strong>Productivity apps.</strong> Ember’s historical strength: sophisticated, highly interactive apps that users spend a lot of time in, getting things done.</li>
+<li><strong>Content apps</strong>, where pages are text-heavy and where the first load is critical. In performance-constrained environments, Ember’s strong conventions can help developers build faster apps by default.</li>
+</ul>
+<a class="header" href="0364-roadmap-2018.html#improve-communication-and-streamline-decision-making" id="improve-communication-and-streamline-decision-making"><h2>Improve communication and streamline decision-making</h2></a>
+<blockquote>
+<p>Silence is the only thing that cause developers to lose trust in Ember. And overcommunication is the cure to silence.
+—<a href="https://embermap.com/notes/107-our-wish-for-ember-in-2018-overcommunication">Ryan Toronto and Sam Selikoff</a></p>
+</blockquote>
+<blockquote>
+<p>Technical leadership seems to me to be about 10% technical brilliance and 90% clear communication. We have loads of technical brilliance; we need more communication!
+—<a href="https://www.chriskrycho.com/2018/emberjs2018-part-3.html">Chris Krycho</a></p>
+</blockquote>
+<blockquote>
+<p>Communication is well, not stellar. Newsletters do a great job at communicating what already happened, but future plans are largely unknown to public.
+—<a href="https://medium.com/@vlascik/honest-look-at-ember-in-the-middle-of-2018-a0dc2787e506">V. Lascik</a></p>
+</blockquote>
+<blockquote>
+<p>The Core Team is in a unique position to add external-facing commentary on the framework's vision. Our RFC process and release posts are awesome, and they have done great things internally, so I would like to encourage Core to look outwards next.
+—<a href="https://gist.github.com/jenweber/a9fbea98478fc3841fb8b24f7dc961c8">Jen Weber</a></p>
+</blockquote>
+<blockquote>
+<p>My hope is that Ember will continue to be an investment worth making. I see a growing, diverse community with lots of fresh faces as an essential part of that.
+—<a href="https://medium.com/@mattmcmanus/emberjs2018-2d28a441fadb">Matt McManus</a></p>
+</blockquote>
+<blockquote>
+<p>Finding how and where I can help feels scattered. Issues do not receive effective labeling. This has translated into me not contributing to varying projects.
+—<a href="https://www.innovu.com/2018/05/a-few-quick-thoughts-on-ember-for-2018-from-a-corporate-citizen/">Eli Flanagan</a></p>
+</blockquote>
+<blockquote>
+<p>What I’d wish for Ember’s 2018 Roadmap though is to find ways to lower the entry barriers for newcomers to get started in their attempt to advocate Ember and to be creative on how to encourage a sense of empowerment in the wider community regarding outreach efforts.
+—<a href="https://simplabs.com/blog/2018/05/30/a-little-encouragement-goes-a-long-way-in-2018.html">Jessica Jordan</a></p>
+</blockquote>
+<blockquote>
+<p>My hope is that we will continue to hand off the baton of the community values to developers who are new to Ember.
+—<a href="https://pixelhandler.com/posts/emberjs2018-a-few-suggestions">Bill Heaton</a></p>
+</blockquote>
+<blockquote>
+<p>A good idea would be to continue creating quests for small things like documentation, code-cleaning… And maybe add a place where this quest can be found
+—<a href="https://medium.com/@KamiKillertO/my-emberjs-in-2018-bc7f52739e16">Benjamin Jegard</a></p>
+</blockquote>
+<p>There has never been more time and energy going into Ember, but we’ve heard loud and clear that this momentum is not as visible as it needs to be. We are going to prioritize sharing work as it happens, making planning and status updates more discoverable, and making it easier for would-be contributors to get involved.</p>
+<p>We also need to double down on making Ember as friendly and inclusive as possible, particularly for folks who have never participated in an open source project before. As we bring in new community members, we will make changes to ensure that individuals can have a meaningful impact, no matter what time zone they live in.</p>
+<p>Lastly, we need to make sure that our core teams are not so bogged down that they become a bottleneck for decision-making. Core teams and strike teams decentralize planning, empower new contributors to take ownership of community initiatives, and help to build and strengthen relationships among community members. We will invest in improving the organization and structure of these teams this year.</p>
+<p>To accomplish these goals, this year we will:</p>
+<ul>
+<li><strong>Expand and refine our team structure</strong>, breaking up work and delegating it to strike teams or new core teams as appropriate.</li>
+<li><strong>Move to discoverable communication tools</strong>, such as our Discourse forum, which is visible to search engines, and Discord chat, which doesn't lose history.</li>
+<li><strong>Invest in mentoring</strong>. This includes direct mentorship relationships, as well as written guides like quest issues that are helpful even for people in different time zones or who have difficulty with spoken English.</li>
+<li><strong>Track RFC implementation via GitHub issues</strong>, so it's clear what the next steps are after an RFC is merged.</li>
+<li><strong>Automate communication and status updates.</strong> For example, we will improve the <a href="https://www.emberjs.com/statusboard">Statusboard</a> to automatically pull from RFCs and RFC tracking issues.</li>
+<li><strong>Document “best practices” for core teams</strong>, spreading knowledge about what works and what doesn’t for building an active community.</li>
+<li><strong>Unify the RFC process</strong> to ensure a consistent experience across all of Ember's sub-projects.</li>
+</ul>
+<a class="header" href="0364-roadmap-2018.html#finish-what-we-started" id="finish-what-we-started"><h2>Finish what we started</h2></a>
+<blockquote>
+<p>The last few years have seen the Ember team do a lot of really important exploratory work, including projects like <a href="https://glimmerjs.com/">Glimmer.js</a>; and we have landed some of the initiatives we have started. But I think it’s fair to say that focus has not been our strong suit. It’s time for a year of shipping.—<a href="https://www.chriskrycho.com/2018/emberjs2018-part-1.html">Chris Krycho</a></p>
+</blockquote>
+<blockquote>
+<p>I think the goal of being able to just npm install or yarn install any package and having it &quot;just work&quot; should be high on the TODO list.
+—<a href="http://andrewcallahan.com/a-road-to-ember-4-0/">Andrew Callahan</a></p>
+</blockquote>
+<blockquote>
+<p>When <a href="https://mobile.twitter.com/wycats">Yehuda Katz</a> <a href="https://github.com/emberjs/rfcs/pull/38#issuecomment-355800759">closed</a> that RFC, I think a bit of that dream died, but at the same time I was happy. Not because it wasn't going to happen but because there was clear communication, finally.
+—<a href="https://burstcreations.com/ember-in-2018-and-beyond/">Ilya Radchenko</a></p>
+</blockquote>
+<blockquote>
+<p>I firmly believe that Ember needs to deliver all the great new features that are currently in flight before taking more to its plate.
+—<a href="https://josemarluedke.com/blog/ember-in-2018-getting-ready-for-the-next-major-release/">Josemar Luedke</a></p>
+</blockquote>
+<p>This year, we <strong>need a strong focus on shipping</strong>. Huge improvements to Ember have either already landed or are in the pipeline. We need to cross the finish line on these before moving on to new initiatives, however important or exciting they might seem.</p>
+<p>“Done” doesn’t mean behind a feature flag on canary. Finishing what we started means ensuring that features are discoverable, on by default, and that the guides and other documentation have been revised to take them into account. It means making sure they work well with the entire Ember ecosystem so that new developers get a seamless experience.</p>
+<p>This year, we are going to ship:</p>
+<ul>
+<li><strong>Broccoli 2.0</strong> in Ember CLI, as well as significant investment into Broccoli documentation, marketing and advocacy.</li>
+<li><strong>Module Unification</strong> as the default file system layout.</li>
+<li><strong>Glimmer Components</strong> as the default component API.</li>
+<li><strong>Native JavaScript classes</strong> as the default object model.</li>
+<li><strong>Native JavaScript modules,</strong> including:
+<ul>
+<li><strong>Exposing modules in the build pipeline</strong> and allowing addons to integrate tools like Parcel, Rollup or Webpack.</li>
+<li><strong>Publishing Ember as npm packages</strong>.</li>
+<li><strong>Importing npm packages</strong> into your Ember apps with zero additional configuration. (This was, far and away, the most-mentioned feature request in all of the #EmberJS2018 blog posts.)</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="0364-roadmap-2018.html#ember-octane" id="ember-octane"><h2>Ember Octane</h2></a>
+<blockquote>
+<p>The homepage looks a bit outdated and does not a very compelling job at selling Ember to new users, IMHO. This needs to change.
+—<a href="https://www.kaliber5.de/en/blog/ember-js-in-2018-get-better-at-marketing/">Simon Ihmig</a></p>
+</blockquote>
+<blockquote>
+<p>When you generate a project with <code>ember new</code>, you get a project that is almost “legacy” by standards of the wider JavaScript community.
+—<a href="https://medium.com/@gauravmunjal_86037/stability-without-stagnation-in-2018-ce2d4f519991">Gaurav Munjal</a></p>
+</blockquote>
+<blockquote>
+<p>Ember's custom object model isn't hard to learn, but it's a big reason people are turned off before learning why Ember is such a great choce. I'd like to see ES classes support finished and adopted in the Guides ASAP, followed by decorators.
+—<a href="https://gist.github.com/michaelrkn/ffdd67906a724362bd8f5ccc3434db0f">Michael Kaiser-Nyman</a></p>
+</blockquote>
+<blockquote>
+<p>ES6 syntax, the new file layout, new templating etc. — the new features will land in 3.x releases as non-breaking changes, but let’s prepare to show off the sum of all those amazing parts. Sell the vision, right now! A ‘relaunch’ of Ember in the minds of those who dismiss it.
+—<a href="https://medium.com/@willviles/ember-js-in-2018-lets-market-the-future-e6be9c42cf86">Will Viles</a></p>
+</blockquote>
+<p>Ember releases a new, stable version every six weeks. For existing users, this drumbeat of incremental improvement is easier to keep up with than splashy, big-bang releases.</p>
+<p>However, for people not following Ember closely, it’s easy to miss the significant improvements that happen over time. As detailed in the forthcoming Ember Editions RFC (being worked on by <a href="https://twitter.com/davewasmer">Dave Wasmer</a>), every year or so <strong>we will release a new edition of Ember</strong>, focused on a particular theme. The set of improvements related to that theme, taken together, mark a meaningful change to how people should think about Ember.</p>
+<p>In 2018, we will release the first edition of Ember, called <em>Ember Octane</em>. <strong>Octane will focus on the themes of productivity and performance.</strong> We’ll talk about how Ember excels in performance-constrained environments, particularly on mobile devices, as well as the productivity benefits of modern JavaScript features like classes, decorators, and async functions when paired with Ember’s strong conventions and community.</p>
+<p>This is also a good time for us to review the new application blueprint, to ensure that it is up-to-date with the latest Ember Octane idioms and includes the right set of addons to help new users achieve our goals of productivity and performance.</p>
+<p>Ember Octane is about <em>doing more with less</em>. Not only does this make Ember simpler to learn, it makes the framework smaller and faster, too. These are some of the highlights of Ember Octane:</p>
+<ul>
+<li><strong>No jQuery.</strong> Currently available as an optional feature, we will enable this by default.</li>
+<li><strong>Svelte builds</strong>, where deprecated features are stripped out of framework code. We will get more aggressive about deprecating code that is not widely used.</li>
+<li><strong>Native JavaScript classes</strong> perform better and require less code, and integrate better with tools like TypeScript and ESLint.</li>
+<li><strong>Glimmer components</strong> offer a greatly simplified API and remove common slow paths.</li>
+<li><strong>Incremental rendering and rehydration</strong> that keeps even low-end devices responsive as the application boots.</li>
+<li><strong>Treeshaking</strong> to automatically remove code unused by the application.</li>
+<li><strong>Eliminating the runloop</strong> from the programming model, replaced by <code>async</code> and <code>await</code> in tests.</li>
+<li><strong>Stabilizing Ember Data</strong> by streamlining internals and providing more extension points for applications and addons to customize behavior.</li>
+</ul>
+<p>The final timeline and feature set of Ember Octane will be determined by the core teams and are not set in stone in this RFC.</p>
+<p>In keeping with our commitment to finishing what we’ve started, these are all features that are either finished or being implemented now. We should not plan for Octane to have any features that are not already close to being done today, so that we have adequate time to make sure they all work well together as part a cohesive programming model.</p>
+<p>The process of releasing a new edition also gives us an opportunity to evaluate what it’s like to use Ember end-to-end. We will overhaul the Ember homepage, focusing on Ember Octane and how it helps solve targeted use cases.</p>
+<p>This is also a good time to perform a holistic review of the guides, making sure that examples use the latest idioms and set new learners on a good path.</p>
+<a class="header" href="0364-roadmap-2018.html#non-goals" id="non-goals"><h1>Non-goals</h1></a>
+<p>One of our most important goals this year is to focus on shipping. Focus means saying “no” to ideas that we really like.</p>
+<ul>
+<li><strong>Significant work on Glimmer.js</strong>. We will instead focus on our efforts on incorporating the lessons of Glimmer.js into work that enables a smaller core in Ember.</li>
+<li><strong>Further Glimmer VM optimizations</strong>. Glimmer performance is industry leading and not a bottleneck in most Ember.js apps. At this point, the Ember.js payload is the primary performance bottleneck, and we should turn our attention to enabling better performance there.</li>
+<li><strong>Brand new language features</strong> in either Handlebars templates or Ember’s JavaScript files. There is already a full pipeline of features, such as Glimmer components, JavaScript classes with decorators, and module unification that we need to finish before starting any new major design.</li>
+</ul>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="0345-discord.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="0369-deprecate-computed-clobberability.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="0345-discord.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="0369-deprecate-computed-clobberability.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

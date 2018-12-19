@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0398-RouteInfo-Metadata - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="introduction.html">Introduction</a></li><li><a href="0001-transform-attribute-meta-parameter.html"><strong>1.</strong> 0001-transform-attribute-meta-parameter</a></li><li><a href="0003-block-params.html"><strong>2.</strong> 0003-block-params</a></li><li><a href="0010-engines.html"><strong>3.</strong> 0010-engines</a></li><li><a href="0011-improved-cp-syntax.html"><strong>4.</strong> 0011-improved-cp-syntax</a></li><li><a href="0015-the-road-to-ember-2-0.html"><strong>5.</strong> 0015-the-road-to-ember-2-0</a></li><li><a href="0024-bound-attributes.html"><strong>6.</strong> 0024-bound-attributes</a></li><li><a href="0045-internet-explorer.html"><strong>7.</strong> 0045-internet-explorer</a></li><li><a href="0046-registry-reform.html"><strong>8.</strong> 0046-registry-reform</a></li><li><a href="0050-improved-actions.html"><strong>9.</strong> 0050-improved-actions</a></li><li><a href="0053-helpers.html"><strong>10.</strong> 0053-helpers</a></li><li><a href="0056-improved-release-cycle.html"><strong>11.</strong> 0056-improved-release-cycle</a></li><li><a href="0057-ember-data-reference-unification.html"><strong>12.</strong> 0057-ember-data-reference-unification</a></li><li><a href="0058-helper-listing.html"><strong>13.</strong> 0058-helper-listing</a></li><li><a href="0061-ember-data-background-fetch.html"><strong>14.</strong> 0061-ember-data-background-fetch</a></li><li><a href="0064-contextual-component-lookup.html"><strong>15.</strong> 0064-contextual-component-lookup</a></li><li><a href="0065-deprecation-warning-handlers.html"><strong>16.</strong> 0065-deprecation-warning-handlers</a></li><li><a href="0091-weakmap.html"><strong>17.</strong> 0091-weakmap</a></li><li><a href="0095-router-service.html"><strong>18.</strong> 0095-router-service</a></li><li><a href="0101-ember-data-friendly-errors.html"><strong>19.</strong> 0101-ember-data-friendly-errors</a></li><li><a href="0120-route-serializers.html"><strong>20.</strong> 0120-route-serializers</a></li><li><a href="0136-contains-to-includes.html"><strong>21.</strong> 0136-contains-to-includes</a></li><li><a href="0139-isHtmlSafe.html"><strong>22.</strong> 0139-isHtmlSafe</a></li><li><a href="0143-module-unification.html"><strong>23.</strong> 0143-module-unification</a></li><li><a href="0150-factory-for.html"><strong>24.</strong> 0150-factory-for</a></li><li><a href="0176-javascript-module-api.html"><strong>25.</strong> 0176-javascript-module-api</a></li><li><a href="0178-deprecate-ember-k.html"><strong>26.</strong> 0178-deprecate-ember-k</a></li><li><a href="0181-deprecate-ember-data-initializers.html"><strong>27.</strong> 0181-deprecate-ember-data-initializers</a></li><li><a href="0186-track-unique-history-location-state.html"><strong>28.</strong> 0186-track-unique-history-location-state</a></li><li><a href="0191-deprecate-component-lifecycle-hook-args.html"><strong>29.</strong> 0191-deprecate-component-lifecycle-hook-args</a></li><li><a href="0194-deprecate-custom-event-manager.html"><strong>30.</strong> 0194-deprecate-custom-event-manager</a></li><li><a href="0213-custom-components.html"><strong>31.</strong> 0213-custom-components</a></li><li><a href="0225-ember-engines-mount-params.html"><strong>32.</strong> 0225-ember-engines-mount-params</a></li><li><a href="0226-named-blocks.html"><strong>33.</strong> 0226-named-blocks</a></li><li><a href="0229-deprecate-testing-restricted-resolver.html"><strong>34.</strong> 0229-deprecate-testing-restricted-resolver</a></li><li><a href="0232-simplify-qunit-testing-api.html"><strong>35.</strong> 0232-simplify-qunit-testing-api</a></li><li><a href="0236-deprecation-ember-string.html"><strong>36.</strong> 0236-deprecation-ember-string</a></li><li><a href="0237-deprecation-ember-map.html"><strong>37.</strong> 0237-deprecation-ember-map</a></li><li><a href="0240-es-classes.html"><strong>38.</strong> 0240-es-classes</a></li><li><a href="0252-browser-support-changes.html"><strong>39.</strong> 0252-browser-support-changes</a></li><li><a href="0268-acceptance-testing-refactor.html"><strong>40.</strong> 0268-acceptance-testing-refactor</a></li><li><a href="0276-named-args.html"><strong>41.</strong> 0276-named-args</a></li><li><a href="0278-template-only-components.html"><strong>42.</strong> 0278-template-only-components</a></li><li><a href="0280-remove-application-wrapper.html"><strong>43.</strong> 0280-remove-application-wrapper</a></li><li><a href="0281-es5-getters.html"><strong>44.</strong> 0281-es5-getters</a></li><li><a href="0286-block-let-template-helper.html"><strong>45.</strong> 0286-block-let-template-helper</a></li><li><a href="0287-promote-in-element-to-public-api.html"><strong>46.</strong> 0287-promote-in-element-to-public-api</a></li><li><a href="0293-record-data.html"><strong>47.</strong> 0293-record-data</a></li><li><a href="0294-optional-jquery.html"><strong>48.</strong> 0294-optional-jquery</a></li><li><a href="0297-deprecate-ember-logger.html"><strong>49.</strong> 0297-deprecate-ember-logger</a></li><li><a href="0300-rfc-process-update.html"><strong>50.</strong> 0300-rfc-process-update</a></li><li><a href="0308-deprecate-property-lookup-fallback.html"><strong>51.</strong> 0308-deprecate-property-lookup-fallback</a></li><li><a href="0311-angle-bracket-invocation.html"><strong>52.</strong> 0311-angle-bracket-invocation</a></li><li><a href="0318-array-helper.html"><strong>53.</strong> 0318-array-helper</a></li><li><a href="0322-deprecate-copy-copyable.html"><strong>54.</strong> 0322-deprecate-copy-copyable</a></li><li><a href="0324-deprecate-component-isvisible.html"><strong>55.</strong> 0324-deprecate-component-isvisible</a></li><li><a href="0326-ember-data-filter-deprecation.html"><strong>56.</strong> 0326-ember-data-filter-deprecation</a></li><li><a href="0329-deprecated-ember-evented-in-ember-data.html"><strong>57.</strong> 0329-deprecated-ember-evented-in-ember-data</a></li><li><a href="0331-deprecate-globals-resolver.html"><strong>58.</strong> 0331-deprecate-globals-resolver</a></li><li><a href="0332-ember-data-record-links-and-meta.html"><strong>59.</strong> 0332-ember-data-record-links-and-meta</a></li><li><a href="0335-deprecate-send-action.html"><strong>60.</strong> 0335-deprecate-send-action</a></li><li><a href="0337-native-class-constructor-update.html"><strong>61.</strong> 0337-native-class-constructor-update</a></li><li><a href="0340-deprecate-ember-merge.html"><strong>62.</strong> 0340-deprecate-ember-merge</a></li><li><a href="0345-discord.html"><strong>63.</strong> 0345-discord</a></li><li><a href="0364-roadmap-2018.html"><strong>64.</strong> 0364-roadmap-2018</a></li><li><a href="0369-deprecate-computed-clobberability.html"><strong>65.</strong> 0369-deprecate-computed-clobberability</a></li><li><a href="0370-deprecate-computed-volatile.html"><strong>66.</strong> 0370-deprecate-computed-volatile</a></li><li><a href="0372-ember-data-model-factory-for.html"><strong>67.</strong> 0372-ember-data-model-factory-for</a></li><li><a href="0373-Element-Modifier-Managers.html"><strong>68.</strong> 0373-Element-Modifier-Managers</a></li><li><a href="0375-deprecate-computed-property-modifier.html"><strong>69.</strong> 0375-deprecate-computed-property-modifier</a></li><li><a href="0391-router-helpers.html"><strong>70.</strong> 0391-router-helpers</a></li><li><a href="0392-deprecate-component-manager-string-lookup.html"><strong>71.</strong> 0392-deprecate-component-manager-string-lookup</a></li><li><a href="0398-RouteInfo-Metadata.html" class="active"><strong>72.</strong> 0398-RouteInfo-Metadata</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <ul>
+<li>Start Date: 2018-11-02</li>
+<li>RFC PR: https://github.com/emberjs/rfcs/pull/398</li>
+<li>Ember Issue: (leave this empty)</li>
+</ul>
+<a class="header" href="0398-RouteInfo-Metadata.html#routeinfo-metadata" id="routeinfo-metadata"><h1>RouteInfo MetaData</h1></a>
+<a class="header" href="0398-RouteInfo-Metadata.html#summary" id="summary"><h2>Summary</h2></a>
+<p>The RFC introduces the ability to associate application specific metadata with its corresponding <code>RouteInfo</code> object. This also adds a <code>metadata</code> field to <code>RouteInfo</code>, which will be the return value of <code>buildRouteInfoMetadata</code> for its corresponding <code>Route</code>.</p>
+<pre><code class="language-js">// app/route/profile.js
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+
+export default Route.extend({
+  user: inject('user'),
+  buildRouteInfoMetadata() {
+    return {
+      trackingKey: 'page_profile',
+      user: {
+        id: this.user.id,
+        type: this.user.type
+      }
+    }
+  }
+  // ...
+});
+</code></pre>
+<pre><code class="language-js">// app/services/analytics.js
+import Service, { inject } from '@ember/service';
+
+export default Service.extend({
+  router: inject('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidUpdate', (transition) =&gt; {
+      let { to, from } = transition;
+      let fromMeta = from.metadata;
+      let toMeta = to.metadata;
+      ga.sendEvent('pageView', {
+        from: fromMeta,
+        to: toMeta,
+        timestamp: Date.now(),
+      })
+    })
+  },
+  // ...
+});
+</code></pre>
+<a class="header" href="0398-RouteInfo-Metadata.html#motivation" id="motivation"><h2>Motivation</h2></a>
+<p>While the <code>RouteInfo</code> object is sufficient in providing developers metadata about the <code>Route</code> itself, it is not sufficient in layering on application specific metadata about the <code>Route</code>. This metadata could be anything from a more domain-specific name for a <code>Route</code>, e.g. <code>profile_page</code> vs <code>profile.index</code>, all the way to providing contextual data when the <code>Route</code> was visited.</p>
+<p>This metadata could be used for more pratical things like updating the <code>document.title</code>.
+Currently, addons like <a href="https://github.com/ronco/ember-cli-head">Ember CLI Head</a> and <a href="https://github.com/kimroen/ember-cli-document-title">Ember CLI Document Title</a> require the user to supply special metadata fields on your <code>Route</code> that will be used to update the title. This API would be a formalized place to place that metadata.</p>
+<p>See the <a href="0398-RouteInfo-Metadata.html#appendix-a">appendix</a> for examples.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#detailed-design" id="detailed-design"><h2>Detailed design</h2></a>
+<a class="header" href="0398-RouteInfo-Metadata.html#buildrouteinfometadata" id="buildrouteinfometadata"><h3><code>buildRouteInfoMetadata</code></h3></a>
+<p>This optional hook is intended to be used as a way of letting the routing system know about any metadata associated with the route.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#route-interface-extension" id="route-interface-extension"><h4><code>Route</code> Interface Extension</h4></a>
+<pre><code class="language-ts">interface Route {
+  // ... existing public API
+  buildRouteInfoMetadata(): unknown
+}
+</code></pre>
+<a class="header" href="0398-RouteInfo-Metadata.html#runtime-semantics" id="runtime-semantics"><h4>Runtime Semantics</h4></a>
+<ul>
+<li><strong>Always</strong> called before the <code>beforeModel</code> hook is called</li>
+<li><strong>Maybe</strong> called more than once during a transition e.g. aborts, redirects.</li>
+</ul>
+<a class="header" href="0398-RouteInfo-Metadata.html#routeinfometadata" id="routeinfometadata"><h3><code>RouteInfo.metadata</code></h3></a>
+<p>The <code>metadata</code> optional field on <code>RouteInfo</code> will be populated with the return value of <code>buildRouteInfoMetadata</code>. If there is no metadata associated with the <code>Route</code>, the <code>metadata</code> field will be <code>null</code>.</p>
+<pre><code class="language-ts">interface RouteInfo {
+  // ... existing public API
+  metadata: Maybe&lt;unknown&gt;;
+}
+</code></pre>
+<p>This field will also be added to <code>RouteInfoWithAttributes</code> as it is just a super-set of <code>RouteInfo</code>.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#how-we-teach-this" id="how-we-teach-this"><h2>How we teach this</h2></a>
+<p>We feel that this a low-level primitive that will allow existing tracking addons to encapsulate. That being said the concept here is pretty simple: What gets returned from <code>buildRouteInfoMetadata</code> becomes the value of <code>RouteInfo.metadata</code> for that <code>Route</code>.</p>
+<p>The guides and tutorial should be updated to incorporate an example on how these APIs could integrate with services like Google Analytics.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#drawbacks" id="drawbacks"><h2>Drawbacks</h2></a>
+<p>This adds an additional hook that is called during route activation, expanding the surface area of the <code>Route</code> class.
+While this is true, there is currently no good way to associate application-specific metadata with a route transition.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#alternatives" id="alternatives"><h2>Alternatives</h2></a>
+<p>There are numerous alternative to the proposal:</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#setroutemetadata" id="setroutemetadata"><h3><code>setRouteMetadata</code></h3></a>
+<p>This API would be similar to <code>setComponentManager</code> and <code>setModifierManager</code>. For example:</p>
+<pre><code class="language-js">// app/route/profile.js
+import Route, { setRouteMetadata } from '@ember/routing/route';
+
+export default Route.extend({
+
+  init() {
+    this._super(...arguments);
+    setRouteMetadata(this, {
+      trackingKey: 'page_profile',
+      profile: {
+        viewing: this.userId,
+        locale: this.userLocale
+      }
+    });
+  }
+  // ...
+});
+</code></pre>
+<p>You would then use the a <code>RouteInfo</code> to lookup the value:</p>
+<pre><code class="language-js">// app/services/analytics.js
+import { getRouteMetadata } from '@ember/routing/route';
+import Service, { inject } from '@ember/service';
+ export default Service.extend({
+  router: inject('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidUpdate', (transition) =&gt; {
+      let { to, from } = transition;
+      let { trackingKey: fromKey } = getRouteMetadata(from);
+      let { trackingKey: toKey } = getRouteMetadata(to);
+      ga.sendEvent('pageView', {
+        from: fromKey,
+        to: toKey,
+        timestamp: Date.now(),
+      })
+    })
+  },
+  // ...
+});
+</code></pre>
+<p>This could work but there are two things that are confusing here:</p>
+<ol>
+<li>What happens if you call <code>setRouteMetadata</code> mutliple times. Do you clobber the existing metadata? Do you merge it?</li>
+<li>It is very odd that you would use a <code>RouteInfo</code> to access the metadata when you set it on the <code>Route</code>.</li>
+</ol>
+<a class="header" href="0398-RouteInfo-Metadata.html#routemetadata" id="routemetadata"><h3><code>Route.metadata</code></h3></a>
+<p>This would add a special field to the <code>Route</code> class that would be copied off on to the <code>RouteInfo</code>. For example:</p>
+<pre><code class="language-js">// app/route/profile.js
+import Route, { setRouteMetadata } from '@ember/routing/route';
+
+export default Route.extend({
+  metadata: {
+    trackingKey: 'page_profile',
+    profile: {
+      viewing: this.userId,
+      locale: this.userLocale
+    }
+  }
+  // ...
+});
+</code></pre>
+<p>The value would then be populated on <code>RouteInfo.metadata</code>.</p>
+<pre><code class="language-js">// app/services/analytics.js
+import { getRouteMetadata } from '@ember/routing/route';
+import Service, { inject } from '@ember/service';
+ export default Service.extend({
+  router: inject('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidUpdate', (transition) =&gt; {
+      let { to, from } = transition;
+      let fromMeta = from.metadata;
+      let toMeta = to.metadata;
+      ga.sendEvent('pageView', {
+        from: fromKey,
+        to: toKey,
+        timestamp: Date.now(),
+      })
+    })
+  },
+  // ...
+});
+</code></pre>
+<p>This could work but there are two things that are problematic here:</p>
+<ol>
+<li>What happens to the this data if you subclass it? Do you merge or clobber the field?</li>
+<li>This is a generic property name and may conflict in existing applications</li>
+</ol>
+<a class="header" href="0398-RouteInfo-Metadata.html#return-metadata-from-activate" id="return-metadata-from-activate"><h3>Return Metadata From <code>activate</code></h3></a>
+<p>Today <code>activate</code> does not get called when the dynamic segments of the <code>Route</code> change, making it not well fit for this use case.</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#unresolved-questions" id="unresolved-questions"><h2>Unresolved questions</h2></a>
+<p>TBD?</p>
+<a class="header" href="0398-RouteInfo-Metadata.html#apendix-a" id="apendix-a"><h3>Apendix A</h3></a>
+<p>Tracking example</p>
+<pre><code class="language-js">// app/route/profile.js
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+export default Route.extend({
+  user: inject('user'),
+  buildRouteInfoMetadata() {
+    return {
+      trackingKey: 'page_profile',
+      user: {
+        id: this.user.id,
+        type: this.user.type
+      }
+    }
+  }
+  // ...
+});
+</code></pre>
+<pre><code class="language-js">// app/services/analytics.js
+import Service, { inject } from '@ember/service';
+
+export default Service.extend({
+  router: inject('router'),
+  init() {
+    this._super(...arguments);
+    this.router.on('routeDidUpdate', (transition) =&gt; {
+      let { to, from } = transition;
+      let fromMeta = from.metadata;
+      let toMeta = to.metadata;
+      ga.sendEvent('pageView', {
+        from: fromMeta,
+        to: toMeta,
+        timestamp: Date.now(),
+      })
+    })
+  },
+  // ...
+});
+</code></pre>
+<a class="header" href="0398-RouteInfo-Metadata.html#appendix-b" id="appendix-b"><h3>Appendix B</h3></a>
+<p>Updating document.title</p>
+<pre><code class="language-js">// app/route/profile.js
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+export default Route.extend({
+  user: inject('user'),
+  buildRouteInfoMetadata() {
+    return {
+      title: 'My Cool WebPage'
+    }
+  }
+  // ...
+});
+</code></pre>
+<pre><code class="language-js">// app/router.js
+import Router from '@ember/routing/router';
+
+// ...
+export default Router.extend({
+  init() {
+    this._super(...arguments);
+    this.on('routeDidUpdate', (transition) =&gt; {
+      let { title } = transition.metadata;
+      document.title = title;
+    });
+  },
+  // ...
+});
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="0392-deprecate-component-manager-string-lookup.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+
+            </div>
+
+            
+                <a href="0392-deprecate-component-manager-string-lookup.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>0300-rfc-process-update - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="introduction.html">Introduction</a></li><li><a href="0001-transform-attribute-meta-parameter.html"><strong>1.</strong> 0001-transform-attribute-meta-parameter</a></li><li><a href="0003-block-params.html"><strong>2.</strong> 0003-block-params</a></li><li><a href="0010-engines.html"><strong>3.</strong> 0010-engines</a></li><li><a href="0011-improved-cp-syntax.html"><strong>4.</strong> 0011-improved-cp-syntax</a></li><li><a href="0015-the-road-to-ember-2-0.html"><strong>5.</strong> 0015-the-road-to-ember-2-0</a></li><li><a href="0024-bound-attributes.html"><strong>6.</strong> 0024-bound-attributes</a></li><li><a href="0045-internet-explorer.html"><strong>7.</strong> 0045-internet-explorer</a></li><li><a href="0046-registry-reform.html"><strong>8.</strong> 0046-registry-reform</a></li><li><a href="0050-improved-actions.html"><strong>9.</strong> 0050-improved-actions</a></li><li><a href="0053-helpers.html"><strong>10.</strong> 0053-helpers</a></li><li><a href="0056-improved-release-cycle.html"><strong>11.</strong> 0056-improved-release-cycle</a></li><li><a href="0057-ember-data-reference-unification.html"><strong>12.</strong> 0057-ember-data-reference-unification</a></li><li><a href="0058-helper-listing.html"><strong>13.</strong> 0058-helper-listing</a></li><li><a href="0061-ember-data-background-fetch.html"><strong>14.</strong> 0061-ember-data-background-fetch</a></li><li><a href="0064-contextual-component-lookup.html"><strong>15.</strong> 0064-contextual-component-lookup</a></li><li><a href="0065-deprecation-warning-handlers.html"><strong>16.</strong> 0065-deprecation-warning-handlers</a></li><li><a href="0091-weakmap.html"><strong>17.</strong> 0091-weakmap</a></li><li><a href="0095-router-service.html"><strong>18.</strong> 0095-router-service</a></li><li><a href="0101-ember-data-friendly-errors.html"><strong>19.</strong> 0101-ember-data-friendly-errors</a></li><li><a href="0120-route-serializers.html"><strong>20.</strong> 0120-route-serializers</a></li><li><a href="0136-contains-to-includes.html"><strong>21.</strong> 0136-contains-to-includes</a></li><li><a href="0139-isHtmlSafe.html"><strong>22.</strong> 0139-isHtmlSafe</a></li><li><a href="0143-module-unification.html"><strong>23.</strong> 0143-module-unification</a></li><li><a href="0150-factory-for.html"><strong>24.</strong> 0150-factory-for</a></li><li><a href="0176-javascript-module-api.html"><strong>25.</strong> 0176-javascript-module-api</a></li><li><a href="0178-deprecate-ember-k.html"><strong>26.</strong> 0178-deprecate-ember-k</a></li><li><a href="0181-deprecate-ember-data-initializers.html"><strong>27.</strong> 0181-deprecate-ember-data-initializers</a></li><li><a href="0186-track-unique-history-location-state.html"><strong>28.</strong> 0186-track-unique-history-location-state</a></li><li><a href="0191-deprecate-component-lifecycle-hook-args.html"><strong>29.</strong> 0191-deprecate-component-lifecycle-hook-args</a></li><li><a href="0194-deprecate-custom-event-manager.html"><strong>30.</strong> 0194-deprecate-custom-event-manager</a></li><li><a href="0213-custom-components.html"><strong>31.</strong> 0213-custom-components</a></li><li><a href="0225-ember-engines-mount-params.html"><strong>32.</strong> 0225-ember-engines-mount-params</a></li><li><a href="0226-named-blocks.html"><strong>33.</strong> 0226-named-blocks</a></li><li><a href="0229-deprecate-testing-restricted-resolver.html"><strong>34.</strong> 0229-deprecate-testing-restricted-resolver</a></li><li><a href="0232-simplify-qunit-testing-api.html"><strong>35.</strong> 0232-simplify-qunit-testing-api</a></li><li><a href="0236-deprecation-ember-string.html"><strong>36.</strong> 0236-deprecation-ember-string</a></li><li><a href="0237-deprecation-ember-map.html"><strong>37.</strong> 0237-deprecation-ember-map</a></li><li><a href="0240-es-classes.html"><strong>38.</strong> 0240-es-classes</a></li><li><a href="0252-browser-support-changes.html"><strong>39.</strong> 0252-browser-support-changes</a></li><li><a href="0268-acceptance-testing-refactor.html"><strong>40.</strong> 0268-acceptance-testing-refactor</a></li><li><a href="0276-named-args.html"><strong>41.</strong> 0276-named-args</a></li><li><a href="0278-template-only-components.html"><strong>42.</strong> 0278-template-only-components</a></li><li><a href="0280-remove-application-wrapper.html"><strong>43.</strong> 0280-remove-application-wrapper</a></li><li><a href="0281-es5-getters.html"><strong>44.</strong> 0281-es5-getters</a></li><li><a href="0286-block-let-template-helper.html"><strong>45.</strong> 0286-block-let-template-helper</a></li><li><a href="0287-promote-in-element-to-public-api.html"><strong>46.</strong> 0287-promote-in-element-to-public-api</a></li><li><a href="0293-record-data.html"><strong>47.</strong> 0293-record-data</a></li><li><a href="0294-optional-jquery.html"><strong>48.</strong> 0294-optional-jquery</a></li><li><a href="0297-deprecate-ember-logger.html"><strong>49.</strong> 0297-deprecate-ember-logger</a></li><li><a href="0300-rfc-process-update.html" class="active"><strong>50.</strong> 0300-rfc-process-update</a></li><li><a href="0308-deprecate-property-lookup-fallback.html"><strong>51.</strong> 0308-deprecate-property-lookup-fallback</a></li><li><a href="0311-angle-bracket-invocation.html"><strong>52.</strong> 0311-angle-bracket-invocation</a></li><li><a href="0318-array-helper.html"><strong>53.</strong> 0318-array-helper</a></li><li><a href="0322-deprecate-copy-copyable.html"><strong>54.</strong> 0322-deprecate-copy-copyable</a></li><li><a href="0324-deprecate-component-isvisible.html"><strong>55.</strong> 0324-deprecate-component-isvisible</a></li><li><a href="0326-ember-data-filter-deprecation.html"><strong>56.</strong> 0326-ember-data-filter-deprecation</a></li><li><a href="0329-deprecated-ember-evented-in-ember-data.html"><strong>57.</strong> 0329-deprecated-ember-evented-in-ember-data</a></li><li><a href="0331-deprecate-globals-resolver.html"><strong>58.</strong> 0331-deprecate-globals-resolver</a></li><li><a href="0332-ember-data-record-links-and-meta.html"><strong>59.</strong> 0332-ember-data-record-links-and-meta</a></li><li><a href="0335-deprecate-send-action.html"><strong>60.</strong> 0335-deprecate-send-action</a></li><li><a href="0337-native-class-constructor-update.html"><strong>61.</strong> 0337-native-class-constructor-update</a></li><li><a href="0340-deprecate-ember-merge.html"><strong>62.</strong> 0340-deprecate-ember-merge</a></li><li><a href="0345-discord.html"><strong>63.</strong> 0345-discord</a></li><li><a href="0364-roadmap-2018.html"><strong>64.</strong> 0364-roadmap-2018</a></li><li><a href="0369-deprecate-computed-clobberability.html"><strong>65.</strong> 0369-deprecate-computed-clobberability</a></li><li><a href="0370-deprecate-computed-volatile.html"><strong>66.</strong> 0370-deprecate-computed-volatile</a></li><li><a href="0372-ember-data-model-factory-for.html"><strong>67.</strong> 0372-ember-data-model-factory-for</a></li><li><a href="0373-Element-Modifier-Managers.html"><strong>68.</strong> 0373-Element-Modifier-Managers</a></li><li><a href="0375-deprecate-computed-property-modifier.html"><strong>69.</strong> 0375-deprecate-computed-property-modifier</a></li><li><a href="0391-router-helpers.html"><strong>70.</strong> 0391-router-helpers</a></li><li><a href="0392-deprecate-component-manager-string-lookup.html"><strong>71.</strong> 0392-deprecate-component-manager-string-lookup</a></li><li><a href="0398-RouteInfo-Metadata.html"><strong>72.</strong> 0398-RouteInfo-Metadata</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <ul>
+<li>Start Date: 2018-02-04</li>
+<li>RFC PR: https://github.com/emberjs/rfcs/pull/300</li>
+<li>Ember Issue: (leave this empty)</li>
+</ul>
+<a class="header" href="0300-rfc-process-update.html#rfc-request-for-comments-process-update" id="rfc-request-for-comments-process-update"><h1>RFC (Request for Comments) Process Update</h1></a>
+<a class="header" href="0300-rfc-process-update.html#summary" id="summary"><h2>Summary</h2></a>
+<p>Refine the Ember RFC process and have it apply to all Ember teams.</p>
+<a class="header" href="0300-rfc-process-update.html#motivation" id="motivation"><h2>Motivation</h2></a>
+<p>The Ember community has been using the RFC process to great effect over the last few years.
+Proposals by both Core and community members are discussed and refined
+with the result coming out much stronger.</p>
+<p>During this time, the community and the core teams have identified shortcomings
+of the RFC process as well as new requirements, which this RFC intends to address:</p>
+<a class="header" href="0300-rfc-process-update.html#confusion-between-emberjsrfcs-and-ember-clirfcs" id="confusion-between-emberjsrfcs-and-ember-clirfcs"><h3>Confusion between emberjs/rfcs and ember-cli/rfcs</h3></a>
+<p>The Ember project currently has two separate RFC processes for Ember.js and Ember CLI.</p>
+<p>This leads to confusion because the community needs to keep track of two different repositories.
+For contributors there is the overhead of having to decide where to file their RFC if the proposal involves both projects,
+as well as being aware of the differences in the processes.</p>
+<a class="header" href="0300-rfc-process-update.html#the-process-does-not-cover-the-entire-project" id="the-process-does-not-cover-the-entire-project"><h3>The process does not cover the entire project</h3></a>
+<p>RFCs to emberjs/rfcs and ember-cli/rfcs have traditionally concerned themselves with features or deprecations to Ember.js and Ember CLI respectfully, with some Ember Data proposals in emberjs/rfcs.</p>
+<p>We have already begun to use emberjs/rfcs for other initiatives, such as the project-wide Ember.js 2018 Roadmap but have not codified or updated the process to make it clear that it should be used for efforts such as a website redesign,
+information architecture suggestions, SEO suggestions, and the like.</p>
+<a class="header" href="0300-rfc-process-update.html#lingering-rfcs" id="lingering-rfcs"><h3>Lingering RFCs</h3></a>
+<p>Both the emberjs/rfcs and the ember-cli/rfcs repositories have many open issues and pull-requests.
+A percentage of these have not been active in the recent past.</p>
+<p>We have kept PRs and issues open so people could more easily find the discussions,
+but this has instead given a negative impression of staleness, as RFCs linger open without new feedback.</p>
+<a class="header" href="0300-rfc-process-update.html#the-process-for-an-rfc-after-it-has-been-accepted" id="the-process-for-an-rfc-after-it-has-been-accepted"><h3>The process for an RFC after it has been accepted</h3></a>
+<p>At the moment the process does not specify what happens when an RFC is accepted and merged. This has led to many questions about the status of merged RFCs.</p>
+<a class="header" href="0300-rfc-process-update.html#detailed-design" id="detailed-design"><h2>Detailed design</h2></a>
+<a class="header" href="0300-rfc-process-update.html#one-rfc-process-for-all-of-ember" id="one-rfc-process-for-all-of-ember"><h3>One RFC Process for all of Ember</h3></a>
+<p>Ember is <a href="https://emberjs.com/team/">organized into teams</a>, with each team being responsible for certain projects.
+The RFC process will be a useful tool for all of those projects.
+The header of the RFC template will be updated to include a spot to specify the relevant team(s). The header will have &quot;Ember Issue:&quot; removed.</p>
+<p>A list of the teams and respective projects will be added to the instructions,
+possibly with the addition of per-team instructions on specifics of the project.
+Additional templates might be created as well, such a design work template.</p>
+<p>Each team will be responsible for reviewing new RFCs and, if an RFC requires work from their team, ensuring that the RFC reflects that.
+As it is with the wider community, the RFC process is the time for teams and team members to push back on, encourage, refine, or otherwise comment on proposals.</p>
+<a class="header" href="0300-rfc-process-update.html#require-a-core-champion" id="require-a-core-champion"><h3>Require a Core Champion</h3></a>
+<p>To make sure that RFCs receive adequate support from the team, Ember CLI has implemented the idea of a champion associated with each RFC.
+One goal is that in seeking a champion from the team,
+the RFC author starts a dialogue with the team and gets some early feedback.
+That champion is then responsible for representing the RFC in team meetings, and for shepherding its progress. We will import a version of this process to emberjs/rfcs:</p>
+<p>Each RFC will require a champion from the primary core team to which the RFC has been marked relevant.
+The champion must be found by the opener of the RFC or other community member. They are not assigned by the core teams.
+The champion will assign themselves on the RFC on Github.
+The champion will be responsible for:</p>
+<ul>
+<li>achieving consensus from the team(s) to move the RFC through the stages of the RFC process.</li>
+<li>ensuring the RFC follows the RFC process.</li>
+<li>shepherding the planning and implementation of the RFC.
+Before the RFC is accepted, the champion may remove themselves.
+The champion may find a replacement champion at any time.</li>
+</ul>
+<p>A section on 'Finding a champion' will be added to the instructions on proposing an RFC.</p>
+<a class="header" href="0300-rfc-process-update.html#introduce-the-concept-of-fcp-to-close" id="introduce-the-concept-of-fcp-to-close"><h3>Introduce the concept of &quot;FCP to close&quot;</h3></a>
+<p>To address the problem of RFC triage and inactivity, this RFC introduces the concept of FCP to close.</p>
+<p>Closing an RFC should be viewed as another triage tool, not as a rejection of the RFC.
+Sometimes a rewrite of an RFC would be so fundamental that it would benefit of a fresh discussion in a new thread.
+Sometimes the original author is no longer active (Champions should help here as well),
+and someone else might want to take over the work in a new RFC.
+Sometimes the timing might not be right, or the feature might have been addressed some other way, and yes,
+sometimes it might be something that is not aligned with the team's values for the project.</p>
+<p>A good example of this is the <a href="https://github.com/emberjs/rfcs/blob/master/text/0226-named-blocks.md#motivation">Named Blocks RFC</a>,
+which lists in the motivation section previous attempts at similar ideas.</p>
+<p>Like the FCP to merge process, once an RFC is marked as FCP to close there will be a period of one week where people can raise new concerns.
+After that period of one week, the respective team will review and close the RFC or extend the period for another week.</p>
+<a class="header" href="0300-rfc-process-update.html#merge-ember-clirfcs-into-emberjsrfcs" id="merge-ember-clirfcs-into-emberjsrfcs"><h3>Merge ember-cli/rfcs into emberjs/rfcs</h3></a>
+<p>We will have a single repository for all Ember Project RFCs.</p>
+<p>To achieve merging ember-cli/rfcs into emberjs/rfcs the following will be done:</p>
+<ul>
+<li>Add to the RFC header to indicate it applies to ember-cli</li>
+<li>Copy both active and completed RFC files into <code>text</code> of emberjs/rfcs</li>
+<li>Transfer active PRs and Issues to emberjs/rfcs</li>
+<li>Archive ember-cli/rfcs</li>
+</ul>
+<p>There are some concerns about links breaking when we move the files to emberjs/rfcs,
+but given the fact that ember-cli/rfcs had the concept of active/completed by moving the files into different folders,
+links were already being broken.</p>
+<p>The ember-cli/rfcs do not need name or numbering changes, as there is currently no duplicated name.
+Going forward, the numbering should be unified by virtue of having a single repository.</p>
+<a class="header" href="0300-rfc-process-update.html#track-rfcs-after-they-are-accepted" id="track-rfcs-after-they-are-accepted"><h3>Track RFCs after they are accepted</h3></a>
+<p>At the moment it is not clear what happens to an RFC after it has been merged.</p>
+<p>This RFC proposes that after an RFC is merged, the relevant teams, guided by the champion,
+will plan implementation by creating tracking issues in the relevant projects.</p>
+<p>This RFC proposes having a single place to track the implementation of each RFC.
+Each RFC will have a header <code>Tracking:</code> that will be filled out with a link. At that link all issues related to that RFC, across all projects and organizations, will be enumerated.</p>
+<a class="header" href="0300-rfc-process-update.html#how-we-teach-this" id="how-we-teach-this"><h2>How We Teach This</h2></a>
+<p>To ensure that contributors are updated on the RFC process and the process is clear,
+the documentation should be improved in a couple of ways.</p>
+<p>The README will be updated to reflect process changes described in this RFC.
+We will add checklists to the instructions for each stage of the RFC process to make it very clear what needs to happen.</p>
+<a class="header" href="0300-rfc-process-update.html#drawbacks" id="drawbacks"><h2>Drawbacks</h2></a>
+<a class="header" href="0300-rfc-process-update.html#adjustment-period" id="adjustment-period"><h3>Adjustment period</h3></a>
+<p>There are active RFCs in ember-cli/rfcs. Moving these discussions would be onerous, so they should be kept there until completion, and no new RFCs accepted.</p>
+<a class="header" href="0300-rfc-process-update.html#permalinks-to-ember-clirfcs-proposals" id="permalinks-to-ember-clirfcs-proposals"><h3>Permalinks to ember-cli/rfcs proposals</h3></a>
+<p>Moving the RFC files from ember-cli/rfcs (active or completed) to emberjs/rfcs can be seen as a breaking change, and could lead to someone linking to ember-cli/rfcs and then the RFC being updated in emberjs/rfcs. However, ember-cli/rfcs already suffers from a linking problem due to the active/completed folders, as RFCs need to be moved from one to the other even after being accepted.
+This could be mitigated by introducing a warning in the RFC text directing people to the new source.</p>
+<a class="header" href="0300-rfc-process-update.html#alternatives" id="alternatives"><h2>Alternatives</h2></a>
+<p>None at the moment.</p>
+<a class="header" href="0300-rfc-process-update.html#unresolved-questions" id="unresolved-questions"><h2>Unresolved questions</h2></a>
+<p>None at the moment.</p>
+<hr />
+<a class="header" href="0300-rfc-process-update.html#glossary" id="glossary"><h2>Glossary</h2></a>
+<ul>
+<li><strong>RFC</strong>: Request For Comments. The process by which a proposal is discussed by the community and then approved by an Ember team.</li>
+<li><strong>FCP</strong>: Final Comment Period. Period of one week at the end of which an RFC is to be accepted or rejected by an Ember team. Extended in periods of one week if new concerns are raised.</li>
+</ul>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="0297-deprecate-ember-logger.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="0308-deprecate-property-lookup-fallback.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="0297-deprecate-ember-logger.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="0308-deprecate-property-lookup-fallback.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>
